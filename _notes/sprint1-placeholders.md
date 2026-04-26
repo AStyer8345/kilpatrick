@@ -43,24 +43,25 @@ This document is the clean handoff list for everything Sprint 1 left as a placeh
 
 ## P1 — Pre-Sprint 2 / nice to have
 
-### Assets needed
+### Assets — current state
 
-Every `<!-- ASSET NEEDED: ... -->` comment in the HTML files corresponds to a placeholder. Inventory:
+Sprint 1 wired in legacy site photography from `/Users/adamstyer/Documents/Claude/Projects/kilpatrick/photos/website/2024-current/`. These are working placeholders pulled from the existing crystalkilpatrick.com site and may need refresh (especially Crystal's headshot — confirm date/likeness with Crystal).
 
-#### Homepage (`/index.html`)
-- Hero photograph — Crystal in an Austin neighborhood, full-bleed editorial style, 16:9, charcoal-toned. Currently a CSS gradient.
-- 12 neighborhood photos for the Featured Markets grid (4:3 each). Currently warm-toned gradient placeholders.
-- Authority strip badges (Platinum Top 50, Austin Business Journal, ABOR Top 500, HGTV, KW, CRS, CLHMS) — currently styled text labels.
+#### Wired in for Sprint 1
+- Hero (`/`): luxury home exterior with pool — `images/hero-home.jpg` (was `home-slider-4.jpg`).
+- About hero photo: `images/crystal-kilpatrick.jpg` — Crystal headshot from current site.
+- About team banner: **NOT shown** — the available group portrait includes a fourth team member (likely Holly Blackwell). Until Holly's status is confirmed and her bio is added, the banner is held back. Photo file is at `images/team-group.jpg` and will be reinstated in the about page once team roster is final.
+- About team headshots: `images/amy-goldberg.jpg`, `images/kelly-gosey.jpg`.
+- Authority strip (homepage): real images for Platinum Top 50, Austin Business Journal, RealTrends Verified.
 
-#### About (`/about/index.html`)
-- Crystal Kilpatrick professional headshot, 1:1 ratio, high-res.
-- Amy Goldberg headshot, 1:1.
-- Kelly Gosey headshot, 1:1.
-- Optional lifestyle/Crystal-at-Lady-Bird-Lake photo for visual texture.
-
-#### Contact (`/contact/index.html`)
-- Office exterior photo (1801 S. MoPac).
-- Replace map placeholder with embedded Google Maps iframe.
+#### Still needed
+- **Confirm Crystal headshot is current.** The asset pulled from the legacy site may be dated; verify with Crystal whether to keep or commission a new shoot.
+- **12 neighborhood-specific photos** for the Featured Markets grid on the homepage. Sprint 1 left these as warm-toned gradient placeholders. Instagram cover library (423 images) and Facebook listing thumbnails (184 images) exist in the kilpatrick photos folder but are not labeled by neighborhood — pulling them in would require manual sorting per ZIP. Recommend Crystal supply 12 neighborhood photos directly, or pay a stock house for licensed neighborhood imagery.
+- **ABOR Top 500 badge**, **HGTV "My First Place" still + rights**, **Keller Williams Realty brand mark**, **CRS / CLHMS / CNE / RENE designation badges** — still text-only on authority strip. Need official-source assets.
+- **Equal Housing Opportunity logo** in footer — still a styled text placeholder. Replace with the official EHO SVG.
+- **Office exterior photo** (1801 S. MoPac) — for Contact page.
+- **Replace contact-map placeholder** with embedded Google Maps iframe.
+- **Optional Crystal lifestyle shot** (running at Lady Bird Lake, with rescue dogs) for the About bio body — would add texture without competing with the headshot.
 
 ### SEO / AEO infrastructure
 
