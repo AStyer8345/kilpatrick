@@ -298,6 +298,36 @@ strong { color: var(--fg-emphasis); font-weight: 600; }
   align-items: center;
   gap: 18px;
 }
+
+/* Social icons inside nav-actions, sits to the right of "Schedule a Consult".
+   SVGs use stroke="currentColor" so they inherit the nav text color
+   (white over hero, dark on solid/inner pages). */
+.nav-social {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  list-style: none;
+  padding: 0;
+  margin: 0 0 0 4px;
+}
+.nav-social a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  color: var(--text-secondary);
+  border-radius: 50%;
+  transition: color 0.2s ease, transform 0.2s ease, background 0.2s ease;
+}
+.nav-social a:hover {
+  color: var(--gold);
+  transform: translateY(-1px);
+  background: rgba(181, 151, 90, 0.10);
+}
+.nav-social svg { width: 16px; height: 16px; display: block; }
+.site-nav:not(.is-solid):not(.is-inner) .nav-social a { color: rgba(255, 255, 255, 0.78); }
+.site-nav:not(.is-solid):not(.is-inner) .nav-social a:hover { color: #FFFFFF; background: rgba(255, 255, 255, 0.10); }
 .nav-phone {
   font-family: var(--font-body);
   font-size: 14px;
@@ -773,6 +803,25 @@ body.nav-open { overflow: hidden; }
   color: var(--gold);
   margin-top: 8px;
 }
+.testimonial-stars {
+  display: block;
+  color: var(--gold);
+  font-size: 14px;
+  letter-spacing: 0.2em;
+  margin: 0 0 16px;
+  line-height: 1;
+}
+.testimonial-source {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 14px;
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+}
+.testimonial-source svg { width: 12px; height: 12px; }
 .testimonials-cta { text-align: center; margin-top: 48px; }
 .testimonials-cta a {
   font-size: 12px;
@@ -781,6 +830,67 @@ body.nav-open { overflow: hidden; }
   color: var(--gold);
   border-bottom: 1px solid var(--gold);
   padding-bottom: 4px;
+}
+
+/* Marquee scroller — homepage testimonials.
+   Track is duplicated in HTML; we translate -50% to loop seamlessly. */
+.testimonials-marquee {
+  position: relative;
+  overflow: hidden;
+  margin: 0 -24px;            /* let the scroller bleed past .container padding */
+  padding: 12px 0;            /* breathing room for card hover lift */
+  -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 80px, #000 calc(100% - 80px), transparent 100%);
+          mask-image: linear-gradient(90deg, transparent 0, #000 80px, #000 calc(100% - 80px), transparent 100%);
+}
+.testimonials-track {
+  display: flex;
+  gap: 32px;
+  width: max-content;
+  animation: testimonials-scroll 180s linear infinite;
+}
+.testimonials-marquee:hover .testimonials-track,
+.testimonials-marquee:focus-within .testimonials-track {
+  animation-play-state: paused;
+}
+.testimonials-track > .testimonial {
+  flex: 0 0 380px;            /* fixed card width — keeps scroll math predictable */
+  margin: 0;
+}
+@keyframes testimonials-scroll {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .testimonials-track {
+    animation: none;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: auto;
+  }
+  .testimonials-marquee {
+    -webkit-mask-image: none;
+            mask-image: none;
+  }
+}
+
+/* Reviews page — full grid */
+.reviews-page-head { text-align: center; padding: calc(var(--nav-height) + 80px) 0 24px; }
+.reviews-page-head .eyebrow { color: var(--gold); }
+.reviews-page-head h1 { margin: 8px auto 16px; max-width: 22ch; }
+.reviews-page-head p { max-width: 56ch; margin: 0 auto; color: var(--text-secondary); }
+.reviews-page-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+  padding: 56px 0 24px;
+}
+.reviews-page-cta {
+  text-align: center;
+  padding: 24px 0 var(--section-pad);
+}
+.reviews-page-cta .button + .button { margin-left: 12px; }
+@media (max-width: 760px) {
+  .reviews-page-grid { grid-template-columns: 1fr; }
 }
 
 /* =================================================================
@@ -1303,7 +1413,7 @@ body.nav-open { overflow: hidden; }
   :root { --section-pad: var(--section-pad-mobile); }
   .container { padding: 0 24px; }
 
-  .nav-links, .nav-phone, .nav-cta { display: none; }
+  .nav-links, .nav-phone, .nav-cta, .nav-social { display: none; }
   .nav-toggle { display: inline-flex; }
   .nav-actions { gap: 8px; }
 
@@ -1434,6 +1544,11 @@ body.nav-open { overflow: hidden; }
 .guide-card-photo--south-austin { background-image: url("/images/markets/south-austin-78745.jpg"); }
 .guide-card-photo--barton-creek { background-image: url("/images/markets/barton-creek-78735.jpg"); }
 .guide-card-photo--new-braunfels { background-image: url("/images/markets/new-braunfels.jpg"); }
+.guide-card-photo--buda { background-image: url("/images/markets/buda-78610.jpg"); }
+.guide-card-photo--cedar-park { background-image: url("/images/markets/cedar-park-78613.jpg"); }
+.guide-card-photo--dripping-springs { background-image: url("/images/markets/dripping-springs-78620.jpg"); }
+.guide-card-photo--kyle { background-image: url("/images/markets/kyle-78640.jpg"); }
+.guide-card-photo--maple-run { background-image: url("/images/markets/southwest-austin-maple-run-78749.jpg"); background-position: center 35%; }
 .guide-card:hover .guide-card-photo { transform: scale(1.04); transition: transform 1s cubic-bezier(0.165, 0.84, 0.44, 1); }
 .guide-card-body { padding: 28px 32px 32px; }
 .guide-card-zip {
