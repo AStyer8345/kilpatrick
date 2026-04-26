@@ -199,11 +199,12 @@ strong { color: var(--fg-emphasis); font-weight: 600; }
   border-bottom-color: var(--border);
 }
 .site-nav .container {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
   align-items: center;
-  justify-content: space-between;
   gap: 24px;
 }
+.site-nav .nav-actions { justify-self: end; }
 
 /* Inner pages: nav starts solid */
 .site-nav.is-inner {
@@ -221,6 +222,7 @@ strong { color: var(--fg-emphasis); font-weight: 600; }
   font-family: var(--font-display);
   font-size: 22px;
   letter-spacing: 0.01em;
+  white-space: nowrap;
 }
 .brand-sub {
   font-family: var(--font-body);
@@ -258,25 +260,36 @@ strong { color: var(--fg-emphasis); font-weight: 600; }
   color: var(--text);
   padding: 10px 18px;
   position: relative;
-  transition: color 0.18s ease;
+  white-space: nowrap;
+  transition: color 0.25s cubic-bezier(0.165, 0.84, 0.44, 1),
+              transform 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 .nav-links a::after {
   content: "";
   position: absolute;
   left: 18px;
   right: 18px;
-  bottom: 4px;
-  height: 1px;
+  bottom: 6px;
+  height: 2px;
   background: var(--gold);
   transform: scaleX(0);
   transform-origin: left center;
   transition: transform 0.35s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
-.nav-links a:hover { color: var(--gold); }
+.nav-links a:hover {
+  color: var(--gold);
+  transform: translateY(-1px);
+}
 .nav-links a:hover::after { transform: scaleX(1); }
 .nav-sep {
+  display: inline-block;
+  width: 1px;
+  height: 12px;
+  background: currentColor;
+  opacity: 0.4;
+  align-self: center;
+  font-size: 0;     /* hide the "|" text node — keeps HTML semantics, kills the baseline mismatch */
   color: var(--border);
-  font-size: 13px;
   user-select: none;
 }
 
@@ -291,6 +304,7 @@ strong { color: var(--fg-emphasis); font-weight: 600; }
   font-weight: 500;
   letter-spacing: 0.04em;
   color: var(--text);
+  white-space: nowrap;
 }
 .nav-cta {
   background: var(--gold);
@@ -300,6 +314,7 @@ strong { color: var(--fg-emphasis); font-weight: 600; }
   font-size: 12px;
   position: relative;
   overflow: hidden;
+  white-space: nowrap;
   transition: transform 0.35s cubic-bezier(0.165, 0.84, 0.44, 1),
               background 0.2s ease,
               border-color 0.2s ease,
