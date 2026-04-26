@@ -1,0 +1,15 @@
+# OS
+.DS_Store
+Thumbs.db
+
+# Editors
+.vscode/
+.idea/
+*.swp
+
+# Vercel
+.vercel
+
+# Logs / scratch
+*.log
+node_modules/
