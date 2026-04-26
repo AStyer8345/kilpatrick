@@ -1,0 +1,660 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Compare 17 Austin-Area Neighborhoods — Crystal Kilpatrick</title>
+<meta name="description" content="Side-by-side comparison of 17 Austin-area markets: median price, schools, commute, family fit, amenities, and Crystal's take. Filter by lifestyle, budget, commute, and schools.">
+<link rel="canonical" href="https://www.crystalkilpatrick.com/neighborhoods/compare/">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Compare 17 Austin-Area Neighborhoods — Crystal Kilpatrick">
+<meta property="og:description" content="Filter, sort, and explore 17 Austin-area markets — price, schools, commute, lifestyle. Updated April 2026.">
+<meta property="og:url" content="https://www.crystalkilpatrick.com/neighborhoods/compare/">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@400;500&display=swap">
+<link rel="stylesheet" href="/css/style.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "url": "https://www.crystalkilpatrick.com/neighborhoods/compare/",
+      "name": "Compare 17 Austin-Area Neighborhoods",
+      "description": "Side-by-side comparison of 17 Austin-area markets — price, schools, commute, family fit, and amenities.",
+      "isPartOf": {"@id": "https://www.crystalkilpatrick.com/#agent"}
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.crystalkilpatrick.com/"},
+        {"@type": "ListItem", "position": 2, "name": "Neighborhoods", "item": "https://www.crystalkilpatrick.com/neighborhoods/"},
+        {"@type": "ListItem", "position": 3, "name": "Compare", "item": "https://www.crystalkilpatrick.com/neighborhoods/compare/"}
+      ]
+    }
+  ]
+}
+</script>
+
+<style>
+  /* Dashboard styles. All scoped under .dash- to avoid colliding with site-wide styles. */
+  .dash-hero { background: var(--bg); padding: 88px 0 24px; }
+  .dash-hero .eyebrow { margin-bottom: 12px; }
+  .dash-hero h1 { max-width: 22ch; margin-bottom: 16px; }
+  .dash-hero p.lead { max-width: 60ch; }
+  .dash-hero .dash-back { display: inline-block; font-family: var(--font-body); font-size: 0.85rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--text-secondary); margin-bottom: 12px; text-decoration: none; }
+  .dash-hero .dash-back:hover { color: var(--gold); }
+
+  .dash-controls { background: var(--bg-white); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); padding: 24px 0; position: sticky; top: 0; z-index: 5; }
+  .dash-controls-grid { display: grid; gap: 16px; grid-template-columns: minmax(200px, 1.4fr) repeat(4, minmax(140px, 1fr)) auto; align-items: end; }
+  .dash-field label { display: block; font-family: var(--font-body); font-size: 0.75rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-secondary); margin-bottom: 6px; }
+  .dash-field input, .dash-field select { width: 100%; padding: 10px 12px; font-family: var(--font-body); font-size: 0.95rem; border: 1px solid var(--border); background: var(--bg); color: var(--text); border-radius: 0; }
+  .dash-field input:focus, .dash-field select:focus { outline: 2px solid var(--gold); outline-offset: -1px; }
+  .dash-reset { padding: 10px 18px; background: transparent; border: 1px solid var(--text); color: var(--text); font-family: var(--font-body); font-size: 0.85rem; letter-spacing: 0.08em; text-transform: uppercase; cursor: pointer; height: 42px; }
+  .dash-reset:hover { background: var(--text); color: var(--bg); }
+
+  .dash-pills { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
+  .dash-pill { padding: 6px 14px; border: 1px solid var(--border); background: var(--bg); color: var(--text-secondary); font-family: var(--font-body); font-size: 0.8rem; letter-spacing: 0.06em; text-transform: uppercase; cursor: pointer; border-radius: 999px; }
+  .dash-pill[aria-pressed="true"] { background: var(--text); color: var(--bg); border-color: var(--text); }
+
+  .dash-summary { padding: 32px 0; background: var(--bg); border-bottom: 1px solid var(--border); }
+  .dash-summary .facts-grid { margin-top: 0; }
+  .dash-summary .fact dd { font-size: 1.5rem; }
+
+  .dash-main { padding: 56px 0 64px; background: var(--bg); }
+  .dash-layout { display: grid; gap: 40px; grid-template-columns: minmax(0, 1fr) minmax(0, 380px); }
+
+  .dash-table-wrap { background: var(--bg-white); border: 1px solid var(--border); overflow-x: auto; }
+  .dash-table { width: 100%; border-collapse: collapse; font-family: var(--font-body); font-size: 0.92rem; }
+  .dash-table thead th { padding: 14px 16px; text-align: left; font-weight: 500; font-size: 0.75rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-secondary); border-bottom: 1px solid var(--border); white-space: nowrap; cursor: pointer; user-select: none; }
+  .dash-table thead th[aria-sort="ascending"]::after { content: " ↑"; color: var(--gold); }
+  .dash-table thead th[aria-sort="descending"]::after { content: " ↓"; color: var(--gold); }
+  .dash-table tbody tr { border-bottom: 1px solid var(--border); cursor: pointer; }
+  .dash-table tbody tr:hover, .dash-table tbody tr.is-selected { background: var(--bg); }
+  .dash-table tbody tr.is-selected { box-shadow: inset 3px 0 0 var(--gold); }
+  .dash-table td { padding: 16px; vertical-align: top; }
+  .dash-table .dash-name { font-family: var(--font-display); font-size: 1.05rem; color: var(--text); }
+  .dash-table .dash-zip { display: block; font-family: var(--font-body); font-size: 0.78rem; color: var(--text-secondary); margin-top: 2px; letter-spacing: 0.04em; }
+  .dash-table .dash-num { font-variant-numeric: tabular-nums; white-space: nowrap; }
+  .dash-table .dash-score { display: inline-block; min-width: 36px; text-align: center; padding: 2px 8px; background: var(--bg); border: 1px solid var(--border); font-variant-numeric: tabular-nums; }
+  .dash-table .dash-tag { display: inline-block; padding: 2px 8px; margin: 0 4px 4px 0; font-size: 0.7rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--text-secondary); border: 1px solid var(--border); border-radius: 999px; }
+  .dash-empty { padding: 48px 16px; text-align: center; color: var(--text-secondary); font-family: var(--font-body); }
+
+  .dash-featured { background: var(--bg-white); border: 1px solid var(--border); padding: 24px; position: sticky; top: 110px; align-self: start; max-height: calc(100vh - 130px); overflow-y: auto; }
+  .dash-featured .eyebrow { margin-bottom: 8px; }
+  .dash-featured h3 { font-family: var(--font-display); font-size: 1.6rem; line-height: 1.2; margin: 0 0 4px; }
+  .dash-featured .dash-fz { color: var(--text-secondary); font-size: 0.85rem; letter-spacing: 0.04em; margin-bottom: 16px; }
+  .dash-featured .dash-map { width: 100%; height: 220px; border: 1px solid var(--border); margin-bottom: 16px; background: var(--bg); }
+  .dash-featured dl { display: grid; grid-template-columns: 1fr 1fr; gap: 12px 16px; margin: 0 0 16px; padding: 16px 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+  .dash-featured dl > div { min-width: 0; }
+  .dash-featured dt { font-size: 0.7rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-secondary); margin-bottom: 2px; }
+  .dash-featured dd { margin: 0; font-family: var(--font-body); font-size: 0.92rem; color: var(--text); font-variant-numeric: tabular-nums; }
+  .dash-featured .dash-prose p { font-size: 0.92rem; line-height: 1.55; margin: 0 0 10px; }
+  .dash-featured .dash-prose strong { color: var(--text); }
+  .dash-featured .dash-deep { display: inline-block; margin-top: 12px; font-family: var(--font-body); font-size: 0.85rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--text); border-bottom: 1px solid var(--gold); padding-bottom: 2px; text-decoration: none; }
+  .dash-featured .dash-deep:hover { color: var(--gold); }
+  .dash-featured .dash-srcs { font-size: 0.78rem; color: var(--text-secondary); margin-top: 16px; padding-top: 16px; border-top: 1px solid var(--border); }
+  .dash-featured .dash-srcs a { color: var(--text-secondary); text-decoration: underline; text-decoration-color: var(--border); }
+  .dash-featured .dash-srcs a:hover { color: var(--gold); text-decoration-color: var(--gold); }
+
+  @media (max-width: 980px) {
+    .dash-layout { grid-template-columns: 1fr; }
+    .dash-featured { position: static; max-height: none; }
+    .dash-controls { position: static; }
+    .dash-controls-grid { grid-template-columns: 1fr 1fr; }
+    .dash-controls-grid .dash-field--search { grid-column: 1 / -1; }
+    .dash-controls-grid .dash-reset { grid-column: 1 / -1; }
+  }
+</style>
+</head>
+<body>
+
+<a class="skip-link" href="#dash">Skip to dashboard</a>
+
+<header class="site-nav is-inner" id="siteNav">
+  <div class="container">
+    <a class="brand" href="/" aria-label="Crystal Kilpatrick Group home">
+      <span class="brand-name">Crystal Kilpatrick Group</span>
+      <span class="brand-sub">Keller Williams Realty</span>
+    </a>
+    <nav aria-label="Primary">
+      <ul class="nav-links">
+        <li><a href="/buy/">Buy</a></li>
+        <li class="nav-sep" aria-hidden="true">|</li>
+        <li><a href="/sell/">Sell</a></li>
+        <li class="nav-sep" aria-hidden="true">|</li>
+        <li><a href="/neighborhoods/" aria-current="page">Neighborhoods</a></li>
+        <li class="nav-sep" aria-hidden="true">|</li>
+        <li><a href="/about/">About</a></li>
+        <li class="nav-sep" aria-hidden="true">|</li>
+        <li><a href="/testimonials/">Reviews</a></li>
+        <li class="nav-sep" aria-hidden="true">|</li>
+        <li><a href="/contact/">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="nav-actions">
+      <a class="nav-phone js-track-cta" data-event="phone_click" href="tel:+15126805835">512-680-5835</a>
+      <a class="button nav-cta js-track-cta" data-event="calendly_click" href="https://calendly.com/crystalkilpatrick" target="_blank" rel="noopener">Schedule a Consult</a>
+      <button class="nav-toggle" type="button" aria-label="Open menu" aria-controls="mobileNav" aria-expanded="false"><span></span></button>
+    </div>
+  </div>
+</header>
+
+<div class="mobile-nav" id="mobileNav" aria-hidden="true">
+  <div class="mobile-nav-head">
+    <a class="brand" href="/"><span class="brand-name">Crystal Kilpatrick Group</span><span class="brand-sub">Keller Williams Realty</span></a>
+    <button class="mobile-nav-close" type="button" aria-label="Close menu">&times;</button>
+  </div>
+  <ul class="mobile-nav-links">
+    <li><a href="/buy/">Buy</a></li>
+    <li><a href="/sell/">Sell</a></li>
+    <li><a href="/neighborhoods/">Neighborhoods</a></li>
+    <li><a href="/about/">About</a></li>
+    <li><a href="/testimonials/">Reviews</a></li>
+    <li><a href="/contact/">Contact</a></li>
+  </ul>
+  <div class="mobile-nav-foot">
+    <a class="js-track-cta" data-event="calendly_click" href="https://calendly.com/crystalkilpatrick" target="_blank" rel="noopener">Schedule a Consult</a>
+    <a class="js-track-cta" data-event="phone_click" href="tel:+15126805835">512-680-5835</a>
+  </div>
+</div>
+
+<main id="main">
+
+<section class="dash-hero">
+  <div class="container">
+    <a class="dash-back" href="/neighborhoods/">← Back to neighborhoods</a>
+    <p class="eyebrow">Neighborhoods · Compare</p>
+    <h1>Compare 17 Austin-area markets.</h1>
+    <p class="lead">Side-by-side data on price, schools, commute, family fit, and amenities — plus Crystal's read on each one. Filter by lifestyle, budget, and commute. Click a row to see the map and the trade-offs.</p>
+  </div>
+</section>
+
+<section class="dash-controls" aria-label="Filter and sort">
+  <div class="container">
+    <div class="dash-controls-grid">
+      <div class="dash-field dash-field--search">
+        <label for="dash-search">Search</label>
+        <input id="dash-search" type="search" placeholder="Search by name, ZIP, area…" autocomplete="off">
+      </div>
+      <div class="dash-field">
+        <label for="dash-budget">Maximum budget</label>
+        <select id="dash-budget">
+          <option value="">Any budget</option>
+          <option value="400000">≤ $400K</option>
+          <option value="550000">≤ $550K</option>
+          <option value="750000">≤ $750K</option>
+          <option value="1000000">≤ $1M</option>
+          <option value="1500000">≤ $1.5M</option>
+          <option value="2500000">≤ $2.5M</option>
+        </select>
+      </div>
+      <div class="dash-field">
+        <label for="dash-commute">Maximum commute</label>
+        <select id="dash-commute">
+          <option value="">Any commute</option>
+          <option value="30">≤ 30 min peak</option>
+          <option value="45">≤ 45 min peak</option>
+          <option value="60">≤ 60 min peak</option>
+          <option value="75">≤ 75 min peak</option>
+        </select>
+      </div>
+      <div class="dash-field">
+        <label for="dash-school">Minimum school rating</label>
+        <select id="dash-school">
+          <option value="">Any schools</option>
+          <option value="7">7+</option>
+          <option value="8">8+</option>
+          <option value="9">9+</option>
+        </select>
+      </div>
+      <div class="dash-field">
+        <label for="dash-sort">Sort by</label>
+        <select id="dash-sort">
+          <option value="overall">Best overall</option>
+          <option value="price-asc">Lowest price</option>
+          <option value="schools">Best schools</option>
+          <option value="family">Best family fit</option>
+          <option value="commute">Shortest commute</option>
+          <option value="amenities">Most amenities</option>
+        </select>
+      </div>
+      <button id="dash-reset" type="button" class="dash-reset">Reset</button>
+    </div>
+    <div class="dash-pills" role="group" aria-label="Lifestyle filter">
+      <button type="button" class="dash-pill" data-tag="" aria-pressed="true">All lifestyles</button>
+      <button type="button" class="dash-pill" data-tag="hill-country" aria-pressed="false">Hill Country</button>
+      <button type="button" class="dash-pill" data-tag="urban" aria-pressed="false">Urban access</button>
+      <button type="button" class="dash-pill" data-tag="family" aria-pressed="false">Family-focused</button>
+      <button type="button" class="dash-pill" data-tag="luxury" aria-pressed="false">Luxury</button>
+      <button type="button" class="dash-pill" data-tag="value" aria-pressed="false">Value</button>
+      <button type="button" class="dash-pill" data-tag="north-tech" aria-pressed="false">North / tech</button>
+      <button type="button" class="dash-pill" data-tag="river" aria-pressed="false">River</button>
+      <button type="button" class="dash-pill" data-tag="growth" aria-pressed="false">High growth</button>
+    </div>
+  </div>
+</section>
+
+<section class="dash-summary" aria-label="Summary of visible markets">
+  <div class="container">
+    <p class="eyebrow">Visible Markets</p>
+    <dl class="facts-grid" id="dash-summary-grid">
+      <div class="fact"><dt>Showing</dt><dd id="dash-stat-count">—</dd></div>
+      <div class="fact"><dt>Median price</dt><dd id="dash-stat-price">—</dd></div>
+      <div class="fact"><dt>Avg. schools</dt><dd id="dash-stat-schools">—</dd></div>
+      <div class="fact"><dt>Avg. commute</dt><dd id="dash-stat-commute">—</dd></div>
+    </dl>
+  </div>
+</section>
+
+<section class="dash-main" id="dash">
+  <div class="container">
+    <div class="dash-layout">
+      <div>
+        <div class="dash-table-wrap">
+          <table class="dash-table" aria-label="Sortable comparison of Austin-area neighborhoods">
+            <thead>
+              <tr>
+                <th data-sort="name" scope="col">Neighborhood</th>
+                <th data-sort="price" scope="col" class="dash-num">Median price</th>
+                <th data-sort="schools" scope="col" class="dash-num">Schools</th>
+                <th data-sort="family" scope="col" class="dash-num">Family</th>
+                <th data-sort="commute" scope="col" class="dash-num">Peak commute</th>
+                <th data-sort="amenities" scope="col" class="dash-num">Amenities</th>
+                <th scope="col">Best for</th>
+              </tr>
+            </thead>
+            <tbody id="dash-rows"></tbody>
+          </table>
+          <p class="dash-empty" id="dash-empty" hidden>No markets match those filters. Try widening the budget or commute, or reset the filters.</p>
+        </div>
+        <p style="margin-top: 12px; font-size: 0.8rem; color: var(--text-secondary);">Click a column header to change sort. Click a row to update the featured panel.</p>
+      </div>
+
+      <aside class="dash-featured" aria-live="polite" aria-label="Featured neighborhood">
+        <p class="eyebrow">Featured Area</p>
+        <h3 id="dash-feat-name">—</h3>
+        <p class="dash-fz" id="dash-feat-meta">—</p>
+        <iframe class="dash-map" id="dash-feat-map" title="Neighborhood map" loading="lazy" referrerpolicy="no-referrer"></iframe>
+        <dl>
+          <div><dt>Median price</dt><dd id="dash-feat-price">—</dd></div>
+          <div><dt>Schools</dt><dd id="dash-feat-schools">—</dd></div>
+          <div><dt>Family fit</dt><dd id="dash-feat-family">—</dd></div>
+          <div><dt>Peak commute</dt><dd id="dash-feat-commute">—</dd></div>
+        </dl>
+        <div class="dash-prose">
+          <p><strong>Vibe.</strong> <span id="dash-feat-vibe">—</span></p>
+          <p><strong>Best for.</strong> <span id="dash-feat-buyerfit">—</span></p>
+          <p><strong>Watch out.</strong> <span id="dash-feat-watch">—</span></p>
+        </div>
+        <a id="dash-feat-deep" class="dash-deep" href="#">Read full guide →</a>
+        <div class="dash-srcs"><strong>Selected sources:</strong> <span id="dash-feat-srcs"></span></div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<section class="bio">
+  <div class="container">
+    <div class="bio-grid">
+      <div>
+        <p class="eyebrow">Crystal's Note</p>
+        <h2>Use this as a starting frame, not a verdict.</h2>
+      </div>
+      <div class="bio-body">
+        <p>The numbers above are research baselines as of April 2026 — sourced from Realtor.com, Redfin, HAR, GreatSchools, Niche, and a few local market reports. They're directional. The right neighborhood for you depends on your office address, school priorities, lot preferences, and what you're willing to trade for the price.</p>
+        <p>If two markets are close on this dashboard, that's almost always where the conversation should start: same broad fit, very different lived experience. That's where I add the most value.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="bottom-cta">
+  <div class="container">
+    <h2>Want a shortlist?</h2>
+    <p>Tell me what matters and I'll narrow it to three streets in 15 minutes.</p>
+    <a class="button button-primary js-track-cta" data-event="calendly_click" href="https://calendly.com/crystalkilpatrick" target="_blank" rel="noopener">Schedule a Consultation</a>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <span class="brand-name">Crystal Kilpatrick Group</span>
+        <span class="brand-sub">Keller Williams Realty</span>
+        <p class="footer-tagline">Austin real estate since 2000. Quiet access, precise advice, proven results.</p>
+        <div class="footer-contact">
+          <a href="tel:+15126805835">512-680-5835</a><br>
+          <a href="mailto:crystal@crystalkilpatrick.com">crystal@crystalkilpatrick.com</a><br>
+          1801 S. MoPac Expy., #100<br>
+          Austin, TX 78746
+        </div>
+      </div>
+      <div>
+        <h4>Get Started</h4>
+        <ul class="footer-list">
+          <li><a href="/buy/">Buy</a></li>
+          <li><a href="/sell/">Sell</a></li>
+          <li><a href="/neighborhoods/">Neighborhoods</a></li>
+          <li><a href="/contact/">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>About</h4>
+        <ul class="footer-list">
+          <li><a href="/about/">About Crystal</a></li>
+          <li><a href="/testimonials/">Reviews</a></li>
+          <li><a href="https://calendly.com/crystalkilpatrick" target="_blank" rel="noopener">Schedule a Consult</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Connect</h4>
+        <ul class="footer-list footer-social">
+          <li><a href="https://www.instagram.com/crystalkilpatrickgroup/" target="_blank" rel="noopener">Instagram</a></li>
+          <li><a href="https://www.facebook.com/crystalkilpatrickgroup/" target="_blank" rel="noopener">Facebook</a></li>
+          <li><a href="https://www.youtube.com/channel/UCIJLk34TXwYeWNP3xanRSNQ" target="_blank" rel="noopener">YouTube</a></li>
+          <li><a href="https://www.linkedin.com/in/crystalkilpatrick" target="_blank" rel="noopener">LinkedIn</a></li>
+          <li><a href="https://www.zillow.com/profile/crystalaustinrealtor" target="_blank" rel="noopener">Zillow</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-legal">
+      <div>
+        <p><strong>Keller Williams Realty.</strong> Each Keller Williams office is independently owned and operated.</p>
+        <p>Crystal Kilpatrick · Texas Real Estate License #0479475</p>
+        <div class="footer-disclosures">
+          <a href="https://www.trec.texas.gov/sites/default/files/pdf-forms/IABS%201-0_1.pdf" target="_blank" rel="noopener">Information About Brokerage Services</a>
+          <a href="https://www.trec.texas.gov/sites/default/files/pdf-forms/CN%201-2.pdf" target="_blank" rel="noopener">Texas Consumer Protection Notice</a>
+        </div>
+        <div class="footer-eho">
+          <span class="eho-icon" aria-hidden="true">EHO</span>
+          <p style="margin:0">Equal Housing Opportunity. We do business in accordance with the Federal Fair Housing Law and the Equal Credit Opportunity Act.</p>
+        </div>
+      </div>
+      <div>
+        <p>&copy; 2026 Crystal Kilpatrick Group.<br>All rights reserved.</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="/js/main.js"></script>
+
+<script>
+(function () {
+  const osm = (bbox, marker) =>
+    `https://www.openstreetmap.org/export/embed.html?bbox=${bbox}&layer=mapnik&marker=${marker}`;
+
+  const SOURCES = {
+    realtorBelterra: { label: "Realtor.com — Belterra", url: "https://www.realtor.com/local/market/texas/austin/belterra" },
+    realtorZip78737: { label: "Realtor.com — 78737", url: "https://www.realtor.com/local/market/texas/zipcode-78737" },
+    redfinSouthLamar: { label: "Redfin — South Lamar", url: "https://www.redfin.com/neighborhood/177039/TX/Austin/South-Lamar/housing-market" },
+    redfinMapleRun: { label: "Redfin — Maple Run", url: "https://www.redfin.com/neighborhood/231771/TX/Austin/Maple-Run/housing-market" },
+    realtorDripping: { label: "Realtor.com — Dripping Springs", url: "https://www.realtor.com/local/market/texas/hays-county/dripping-springs" },
+    har78620: { label: "HAR — 78620", url: "https://www.har.com/zipcode_78620/pricetrends" },
+    redfinBarton: { label: "Redfin — Barton Creek", url: "https://www.redfin.com/city/21448/TX/Barton-Creek/housing-market" },
+    realtor78735: { label: "Realtor.com — 78735", url: "https://www.realtor.com/local/market/texas/zipcode-78735" },
+    realtorBuda: { label: "Realtor.com — Buda 78610", url: "https://www.realtor.com/local/market/texas/zipcode-78610" },
+    harBuda: { label: "HAR — 78610", url: "https://www.har.com/zipcode_78610/pricetrends" },
+    communityCedarPark: { label: "Community Impact — Cedar Park", url: "https://communityimpact.com/austin/cedar-park/real-estate/2026/02/20/cedar-park-area-home-prices-dip-as-listings-stay-on-market-longer/" },
+    realtorLeander: { label: "Realtor.com — Leander 78641", url: "https://www.realtor.com/local/market/texas/zipcode-78641" },
+    realtorKyle: { label: "Realtor.com — Kyle 78640", url: "https://www.realtor.com/local/market/texas/zipcode-78640" },
+    harKyle: { label: "HAR — 78640", url: "https://www.har.com/zipcode_78640/pricetrends" },
+    harNewBraunfels: { label: "HAR — New Braunfels", url: "https://www.har.com/newbraunfels/realestate/pricetrends" },
+    realtor78132: { label: "Realtor.com — 78132", url: "https://www.realtor.com/local/market/texas/zipcode-78132" },
+    harSanMarcos: { label: "HAR — 78666", url: "https://www.har.com/zipcode_78666/pricetrends" },
+    har78747: { label: "HAR — 78747", url: "https://www.har.com/zipcode_78747/pricetrends" },
+    realtor78739: { label: "Realtor.com — 78739", url: "https://www.realtor.com/local/market/texas/zipcode-78739" },
+    realtor78746: { label: "Realtor.com — 78746", url: "https://www.realtor.com/local/market/texas/zipcode-78746" },
+    orchardEastAustin: { label: "Orchard — East Austin", url: "https://orchard.com/homes/real-estate-market-report/neighborhood/tx/austin/east-austin" },
+    orchardMueller: { label: "Orchard — Mueller", url: "https://orchard.com/homes/real-estate-market-report/neighborhood/tx/austin/mueller" },
+    neuhausPflugerville: { label: "Neuhaus — Pflugerville", url: "https://neuhausre.com/pflugerville-real-estate-market-update-march-2026/" },
+    commuteGuide: { label: "Austin Real Estate Homes Blog — commute guide", url: "https://www.austinrealestatehomesblog.com/living-in-austin/austin-traffic-commute-guide/" },
+    nicheSchools: { label: "Niche — Austin school districts", url: "https://www.niche.com/k12/search/best-school-districts/m/austin-metro-area/" },
+    greatSchools: { label: "GreatSchools — Austin", url: "https://www.greatschools.org/best-schools/texas/austin/?st%5B%5D=public" }
+  };
+
+  const DEEP_GUIDES = {
+    "belterra-bear-creek": "/neighborhoods/belterra-bear-creek-78737/",
+    "south-austin-78745": "/neighborhoods/south-austin-78745/",
+    "dripping-springs": "/neighborhoods/dripping-springs-78620/",
+    "maple-run-78749": "/neighborhoods/southwest-austin-maple-run-78749/"
+  };
+
+  const NEIGHBORHOODS = [
+    { id: "belterra-bear-creek", name: "Belterra / Bear Creek", zip: "78737", area: "Austin ETJ / 290 West", medianPrice: 630000, priceTrend: "Cooling from prior peak, strong school draw", schoolRating: 8.4, familyScore: 9.2, commutePeak: 58, commuteLabel: "45-70 min peak to downtown", amenitiesScore: 7.9, vibe: "Master-planned Hill Country living with parks, newer homes, and DSISD appeal.", buyerFit: "Buyers who want newer homes, trails, and strong schools south-west of Austin.", watchOut: "Downtown commute depends heavily on 290 timing and exact office location.", tags: ["hill-country","family","growth"], mapBbox: "-98.0180%2C30.1425%2C-97.9095%2C30.2388", mapMarker: "30.1907%2C-97.9637", sources: ["realtorBelterra","realtorZip78737","commuteGuide","greatSchools"] },
+    { id: "south-austin-78745", name: "South Austin / South Lamar", zip: "78745", area: "Central South Austin", medianPrice: 485000, priceTrend: "Central demand, wide micro-market spread", schoolRating: 6.8, familyScore: 7.4, commutePeak: 28, commuteLabel: "20-35 min peak depending on corridor", amenitiesScore: 9.3, vibe: "Classic South Austin access to restaurants, music, retail, and quick central trips.", buyerFit: "Buyers who value proximity and lifestyle more than newer subdivision amenities.", watchOut: "School assignments and home condition vary block by block.", tags: ["urban","value"], mapBbox: "-97.8262%2C30.1848%2C-97.7487%2C30.2508", mapMarker: "30.2161%2C-97.7872", sources: ["redfinSouthLamar","realtor78739","commuteGuide","greatSchools"] },
+    { id: "dripping-springs", name: "Dripping Springs", zip: "78620", area: "Hill Country", medianPrice: 755000, priceLabel: "$755K citywide / $737K Apr listing median", priceTrend: "More inventory, premium lifestyle pricing", schoolRating: 8.6, familyScore: 9.1, commutePeak: 58, commuteLabel: "45-70 min peak to downtown", amenitiesScore: 7.6, vibe: "Hill Country space, destination schools, wineries, acreage, and dark-sky feel.", buyerFit: "Families and move-up buyers prioritizing schools, space, and western routes.", watchOut: "Longer drives and higher variance in acreage, utilities, and tax profiles.", tags: ["hill-country","family","luxury"], mapBbox: "-98.1835%2C30.1409%2C-98.0059%2C30.2654", mapMarker: "30.1902%2C-98.0867", sources: ["realtorDripping","har78620","commuteGuide","nicheSchools"] },
+    { id: "maple-run-78749", name: "Southwest Austin / Maple Run", zip: "78749", area: "Southwest Austin", medianPrice: 575000, priceTrend: "Established homes, durable SW Austin demand", schoolRating: 8, familyScore: 8.6, commutePeak: 34, commuteLabel: "25-45 min peak to downtown", amenitiesScore: 8.4, vibe: "Established neighborhoods, mature trees, Bowie High draw, and easy MoPac access.", buyerFit: "Families who want Austin proper plus better yard and school balance.", watchOut: "Older homes can need systems updates; compare condition carefully.", tags: ["family","urban"], mapBbox: "-97.8921%2C30.1738%2C-97.8232%2C30.2373", mapMarker: "30.2028%2C-97.8562", sources: ["redfinMapleRun","realtorBelterra","commuteGuide","greatSchools"] },
+    { id: "barton-lost-creek", name: "Barton Creek / Lost Creek", zip: "78735", area: "West Austin luxury", medianPrice: 1278000, priceLabel: "$1.0M-$2.6M+ Barton Creek vs Lost Creek", priceTrend: "Luxury-led, highly location sensitive", schoolRating: 8.7, familyScore: 8.5, commutePeak: 35, commuteLabel: "25-45 min peak to downtown", amenitiesScore: 8.8, vibe: "Luxury, golf, greenbelt proximity, larger lots, and west-side privacy.", buyerFit: "Move-up and luxury buyers who want Austin access without urban density.", watchOut: "Insurance, remodel scope, HOA, and school district boundaries matter.", tags: ["luxury","family","hill-country"], mapBbox: "-97.9206%2C30.2513%2C-97.8066%2C30.3196", mapMarker: "30.2828%2C-97.8583", sources: ["redfinBarton","realtor78735","commuteGuide","greatSchools"] },
+    { id: "buda", name: "Buda", zip: "78610", area: "I-35 South corridor", medianPrice: 365000, priceTrend: "Affordable south metro option with inventory", schoolRating: 7.2, familyScore: 8.2, commutePeak: 48, commuteLabel: "35-60 min peak to downtown", amenitiesScore: 7.4, vibe: "Small-town downtown, newer subdivisions, and easier entry pricing than Austin proper.", buyerFit: "Budget-aware families who still need Austin access.", watchOut: "I-35 congestion can erase the distance advantage during peak periods.", tags: ["value","family","growth"], mapBbox: "-97.8969%2C30.0262%2C-97.7871%2C30.1272", mapMarker: "30.0817%2C-97.8429", sources: ["realtorBuda","harBuda","commuteGuide"] },
+    { id: "cedar-park", name: "Cedar Park", zip: "78613", area: "Northwest metro", medianPrice: 483000, priceTrend: "Northwest family market, prices eased YoY", schoolRating: 8.5, familyScore: 8.9, commutePeak: 55, commuteLabel: "40-70 min peak to downtown", amenitiesScore: 8.8, vibe: "Schools, parks, retail, sports venues, and north/west tech access.", buyerFit: "Families with north Austin, Domain, or Cedar Park work patterns.", watchOut: "Downtown commuters should test both 183 and MoPac at real times.", tags: ["north-tech","family"], mapBbox: "-97.8819%2C30.4562%2C-97.7583%2C30.5663", mapMarker: "30.5052%2C-97.8203", sources: ["communityCedarPark","commuteGuide","nicheSchools"] },
+    { id: "kyle", name: "Kyle", zip: "78640", area: "I-35 South corridor", medianPrice: 329000, priceTrend: "Value-led with heavy new-home inventory", schoolRating: 6.9, familyScore: 7.8, commutePeak: 63, commuteLabel: "50-75 min peak to downtown", amenitiesScore: 7.2, vibe: "Fast-growing, budget-friendly, and anchored by new subdivisions.", buyerFit: "First-time buyers stretching for more square footage.", watchOut: "Commute reliability is the core trade-off.", tags: ["value","growth","family"], mapBbox: "-97.9343%2C29.9383%2C-97.7918%2C30.0622", mapMarker: "29.9891%2C-97.8772", sources: ["realtorKyle","harKyle","commuteGuide"] },
+    { id: "leander", name: "Leander", zip: "78641", area: "North metro", medianPrice: 480000, priceTrend: "Stable move-up market with rail option", schoolRating: 8.3, familyScore: 8.7, commutePeak: 63, commuteLabel: "50-75 min peak to downtown", amenitiesScore: 7.7, vibe: "Family growth, newer communities, Hill Country edge, and CapMetro rail access.", buyerFit: "Buyers working north or hybrid schedules who want newer homes.", watchOut: "Downtown drive is a real lifestyle constraint five days a week.", tags: ["north-tech","family","growth"], mapBbox: "-98.0004%2C30.5070%2C-97.7862%2C30.6768", mapMarker: "30.5788%2C-97.8531", sources: ["realtorLeander","commuteGuide","nicheSchools"] },
+    { id: "new-braunfels", name: "New Braunfels", zip: "78130 / 78132", area: "Austin-San Antonio corridor", medianPrice: 389000, priceLabel: "$389K citywide / $598K in 78132", priceTrend: "River lifestyle with broad price bands", schoolRating: 7.4, familyScore: 8, commutePeak: 72, commuteLabel: "60-85+ min to Austin; San Antonio varies", amenitiesScore: 8.5, vibe: "River recreation, Gruene, tourism, and a two-metro lifestyle.", buyerFit: "Buyers choosing lifestyle and space over Austin commute convenience.", watchOut: "Austin commuters should treat it as hybrid or occasional commute territory.", tags: ["river","family","growth"], mapBbox: "-98.2306%2C29.6154%2C-97.9650%2C29.8443", mapMarker: "29.7030%2C-98.1245", sources: ["harNewBraunfels","realtor78132","commuteGuide"] },
+    { id: "san-marcos", name: "San Marcos", zip: "78666", area: "I-35 South / university corridor", medianPrice: 350000, priceTrend: "Student, outlet, and river economy mix", schoolRating: 6.4, familyScore: 7, commutePeak: 58, commuteLabel: "45-70 min peak to Austin", amenitiesScore: 8, vibe: "College-town energy, river access, outlets, and lower entry pricing.", buyerFit: "Value seekers, investors, and buyers with San Marcos or hybrid routines.", watchOut: "Micro-location matters around student rental pockets.", tags: ["river","value","growth"], mapBbox: "-98.0306%2C29.7884%2C-97.8654%2C29.9522", mapMarker: "29.8833%2C-97.9414", sources: ["harSanMarcos","commuteGuide"] },
+    { id: "far-south-austin", name: "Far South Austin", zip: "78747", area: "Southeast / South Austin edge", medianPrice: 394000, priceTrend: "Relative Austin value with newer inventory", schoolRating: 6.6, familyScore: 7.6, commutePeak: 42, commuteLabel: "30-55 min peak to downtown", amenitiesScore: 7.1, vibe: "Newer communities, Onion Creek access, and lower Austin-proper pricing.", buyerFit: "Buyers wanting Austin address plus more attainable pricing.", watchOut: "Amenity access and school assignments can differ across the ZIP.", tags: ["value","growth","family"], mapBbox: "-97.8215%2C30.0714%2C-97.6751%2C30.1708", mapMarker: "30.1078%2C-97.7374", sources: ["har78747","realtorKyle","commuteGuide"] },
+    { id: "circle-c", name: "Circle C / Meridian", zip: "78739", area: "Southwest Austin", medianPrice: 799000, priceTrend: "Tight supply, premium family demand", schoolRating: 8.7, familyScore: 9.3, commutePeak: 38, commuteLabel: "30-50 min peak to downtown", amenitiesScore: 8.9, vibe: "Trails, parks, swim centers, and some of South Austin's strongest family demand.", buyerFit: "Families prioritizing schools, amenities, and Austin proper location.", watchOut: "Expect competitive pricing for clean, updated homes.", tags: ["family","luxury","urban"], mapBbox: "-97.9343%2C30.1394%2C-97.8344%2C30.2247", mapMarker: "30.1880%2C-97.8904", sources: ["realtor78739","commuteGuide","greatSchools"] },
+    { id: "westlake", name: "Westlake / Eanes", zip: "78746", area: "West Austin luxury", medianPrice: 2340000, priceTrend: "Ultra-premium, school-driven luxury", schoolRating: 9.6, familyScore: 8.9, commutePeak: 28, commuteLabel: "20-40 min peak to downtown", amenitiesScore: 9, vibe: "Top-tier schools, close-in luxury, lake and hill views.", buyerFit: "Luxury buyers who want elite schools and fast central access.", watchOut: "Inventory, remodel complexity, and taxes require careful underwriting.", tags: ["luxury","family","hill-country"], mapBbox: "-97.8525%2C30.2482%2C-97.7472%2C30.3488", mapMarker: "30.2789%2C-97.8067", sources: ["realtor78746","commuteGuide","nicheSchools"] },
+    { id: "mueller", name: "Mueller", zip: "78723", area: "Central East Austin", medianPrice: 885000, priceTrend: "Walkable urban premium", schoolRating: 7.8, familyScore: 8.3, commutePeak: 22, commuteLabel: "15-30 min peak to downtown", amenitiesScore: 9.5, vibe: "Walkable parks, retail, townhomes, and a compact planned-community feel.", buyerFit: "Buyers who want urban convenience and low-maintenance living.", watchOut: "Lot size and HOA/condo structures are the trade-off.", tags: ["urban","family","growth"], mapBbox: "-97.7270%2C30.2836%2C-97.6792%2C30.3223", mapMarker: "30.2987%2C-97.7078", sources: ["orchardMueller","commuteGuide","greatSchools"] },
+    { id: "east-austin", name: "East Austin", zip: "78702", area: "Central East Austin", medianPrice: 570000, priceTrend: "Lifestyle premium, mixed inventory", schoolRating: 6.3, familyScore: 6.8, commutePeak: 20, commuteLabel: "10-30 min peak to downtown", amenitiesScore: 9.4, vibe: "Restaurants, nightlife, creative energy, and quick downtown access.", buyerFit: "Lifestyle-first buyers and investors comfortable with urban density.", watchOut: "Lot, floodplain, parking, and teardown/new-build context matter.", tags: ["urban","growth"], mapBbox: "-97.7466%2C30.2479%2C-97.6841%2C30.2938", mapMarker: "30.2637%2C-97.7174", sources: ["orchardEastAustin","commuteGuide","greatSchools"] },
+    { id: "pflugerville", name: "Pflugerville", zip: "78660", area: "North / northeast metro", medianPrice: 390000, priceTrend: "Stable entry-to-move-up pricing", schoolRating: 7.2, familyScore: 8, commutePeak: 48, commuteLabel: "35-60 min peak to downtown", amenitiesScore: 7.8, vibe: "Value, parks, lake recreation, and north/east job access.", buyerFit: "Budget-aware buyers working north or east of Austin.", watchOut: "Route choice matters; Parmer, 130, 45, and I-35 produce different days.", tags: ["value","north-tech","family"], mapBbox: "-97.7520%2C30.3902%2C-97.5446%2C30.5200", mapMarker: "30.4394%2C-97.6200", sources: ["neuhausPflugerville","commuteGuide","nicheSchools"] }
+  ];
+
+  function overallScore(n) {
+    const priceTier = n.medianPrice <= 400000 ? 9 :
+                      n.medianPrice <= 600000 ? 8 :
+                      n.medianPrice <= 900000 ? 6.5 :
+                      n.medianPrice <= 1500000 ? 5 : 3.5;
+    const commutePenalty = (n.commutePeak - 20) / 8;
+    return (n.schoolRating + n.familyScore + n.amenitiesScore + priceTier) / 4 - Math.max(0, commutePenalty) * 0.6;
+  }
+
+  const fmtPrice = (n) => n.priceLabel ? n.priceLabel
+    : (n.medianPrice >= 1000000 ? "$" + (n.medianPrice / 1000000).toFixed(2) + "M" : "$" + Math.round(n.medianPrice / 1000) + "K");
+
+  const state = {
+    search: "", tag: "", maxBudget: 0, maxCommute: 0, minSchool: 0,
+    sort: "overall", sortDir: "desc",
+    selectedId: NEIGHBORHOODS[0].id
+  };
+
+  const $ = (id) => document.getElementById(id);
+  const els = {
+    search: $("dash-search"), budget: $("dash-budget"), commute: $("dash-commute"),
+    school: $("dash-school"), sort: $("dash-sort"), reset: $("dash-reset"),
+    pills: document.querySelectorAll(".dash-pill"),
+    rows: $("dash-rows"), empty: $("dash-empty"),
+    statCount: $("dash-stat-count"), statPrice: $("dash-stat-price"),
+    statSchools: $("dash-stat-schools"), statCommute: $("dash-stat-commute"),
+    feat: {
+      name: $("dash-feat-name"), meta: $("dash-feat-meta"), map: $("dash-feat-map"),
+      price: $("dash-feat-price"), schools: $("dash-feat-schools"),
+      family: $("dash-feat-family"), commute: $("dash-feat-commute"),
+      vibe: $("dash-feat-vibe"), buyerfit: $("dash-feat-buyerfit"),
+      watch: $("dash-feat-watch"), deep: $("dash-feat-deep"), srcs: $("dash-feat-srcs")
+    },
+    th: document.querySelectorAll(".dash-table thead th[data-sort]")
+  };
+
+  function getVisible() {
+    const q = state.search.trim().toLowerCase();
+    return NEIGHBORHOODS.filter((n) => {
+      if (q && !(n.name.toLowerCase().includes(q) || n.zip.toLowerCase().includes(q) || n.area.toLowerCase().includes(q))) return false;
+      if (state.tag && !n.tags.includes(state.tag)) return false;
+      if (state.maxBudget && n.medianPrice > state.maxBudget) return false;
+      if (state.maxCommute && n.commutePeak > state.maxCommute) return false;
+      if (state.minSchool && n.schoolRating < state.minSchool) return false;
+      return true;
+    });
+  }
+
+  function sortVisible(list) {
+    const dir = state.sortDir === "asc" ? 1 : -1;
+    const cmp = {
+      overall: (a, b) => (overallScore(a) - overallScore(b)) * dir,
+      "price-asc": (a, b) => (a.medianPrice - b.medianPrice),
+      price: (a, b) => (a.medianPrice - b.medianPrice) * dir,
+      schools: (a, b) => (a.schoolRating - b.schoolRating) * dir,
+      family: (a, b) => (a.familyScore - b.familyScore) * dir,
+      commute: (a, b) => (a.commutePeak - b.commutePeak) * (state.sort === "commute" ? 1 : dir),
+      amenities: (a, b) => (a.amenitiesScore - b.amenitiesScore) * dir,
+      name: (a, b) => a.name.localeCompare(b.name) * dir
+    };
+    return list.slice().sort(cmp[state.sort] || cmp.overall);
+  }
+
+  function escape(str) {
+    return String(str).replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+  }
+
+  function tagLabels(tags) {
+    return tags.slice(0, 3).map((t) => `<span class="dash-tag">${escape(t.replace("-", " "))}</span>`).join("");
+  }
+
+  function render() {
+    const visible = sortVisible(getVisible());
+    if (!visible.length) {
+      els.rows.innerHTML = "";
+      els.empty.hidden = false;
+    } else {
+      els.empty.hidden = true;
+      els.rows.innerHTML = visible.map((n) => `
+        <tr data-id="${n.id}" class="${n.id === state.selectedId ? "is-selected" : ""}" tabindex="0">
+          <td>
+            <span class="dash-name">${escape(n.name)}</span>
+            <span class="dash-zip">${escape(n.zip)} · ${escape(n.area)}</span>
+          </td>
+          <td class="dash-num">${escape(fmtPrice(n))}</td>
+          <td class="dash-num"><span class="dash-score">${n.schoolRating.toFixed(1)}</span></td>
+          <td class="dash-num"><span class="dash-score">${n.familyScore.toFixed(1)}</span></td>
+          <td class="dash-num">${n.commutePeak}m</td>
+          <td class="dash-num"><span class="dash-score">${n.amenitiesScore.toFixed(1)}</span></td>
+          <td>${tagLabels(n.tags)}</td>
+        </tr>
+      `).join("");
+    }
+
+    const count = visible.length;
+    els.statCount.textContent = count + " of " + NEIGHBORHOODS.length;
+    if (count) {
+      const sortedPrices = visible.map((n) => n.medianPrice).sort((a, b) => a - b);
+      const med = sortedPrices.length % 2
+        ? sortedPrices[(sortedPrices.length - 1) / 2]
+        : (sortedPrices[sortedPrices.length / 2 - 1] + sortedPrices[sortedPrices.length / 2]) / 2;
+      const avgSchools = visible.reduce((s, n) => s + n.schoolRating, 0) / count;
+      const avgCommute = visible.reduce((s, n) => s + n.commutePeak, 0) / count;
+      els.statPrice.textContent = med >= 1000000 ? "$" + (med / 1000000).toFixed(2) + "M" : "$" + Math.round(med / 1000) + "K";
+      els.statSchools.textContent = avgSchools.toFixed(1) + " / 10";
+      els.statCommute.textContent = Math.round(avgCommute) + " min";
+    } else {
+      els.statPrice.textContent = "—";
+      els.statSchools.textContent = "—";
+      els.statCommute.textContent = "—";
+    }
+
+    els.th.forEach((th) => {
+      const key = th.getAttribute("data-sort");
+      const matches = (state.sort === key) || (state.sort === "price-asc" && key === "price");
+      th.setAttribute("aria-sort", matches ? (state.sortDir === "asc" ? "ascending" : "descending") : "none");
+    });
+
+    renderFeatured();
+  }
+
+  function renderFeatured() {
+    let n = NEIGHBORHOODS.find((x) => x.id === state.selectedId);
+    if (!n) {
+      n = NEIGHBORHOODS[0];
+      state.selectedId = n.id;
+    }
+    els.feat.name.textContent = n.name;
+    els.feat.meta.textContent = n.zip + " · " + n.area;
+    els.feat.map.src = osm(n.mapBbox, n.mapMarker);
+    els.feat.price.textContent = fmtPrice(n);
+    els.feat.schools.textContent = n.schoolRating.toFixed(1) + " / 10";
+    els.feat.family.textContent = n.familyScore.toFixed(1) + " / 10";
+    els.feat.commute.textContent = n.commuteLabel;
+    els.feat.vibe.textContent = n.vibe;
+    els.feat.buyerfit.textContent = n.buyerFit;
+    els.feat.watch.textContent = n.watchOut;
+
+    const guide = DEEP_GUIDES[n.id];
+    if (guide) {
+      els.feat.deep.href = guide;
+      els.feat.deep.textContent = "Read full guide →";
+    } else {
+      els.feat.deep.href = "/contact/";
+      els.feat.deep.textContent = "Ask Crystal about this area →";
+    }
+
+    els.feat.srcs.innerHTML = (n.sources || []).map((s) => {
+      const src = SOURCES[s];
+      return src ? `<a href="${src.url}" target="_blank" rel="noopener">${escape(src.label)}</a>` : "";
+    }).filter(Boolean).join(" · ");
+  }
+
+  els.search.addEventListener("input", (e) => { state.search = e.target.value; render(); });
+  els.budget.addEventListener("change", (e) => { state.maxBudget = +e.target.value || 0; render(); });
+  els.commute.addEventListener("change", (e) => { state.maxCommute = +e.target.value || 0; render(); });
+  els.school.addEventListener("change", (e) => { state.minSchool = +e.target.value || 0; render(); });
+  els.sort.addEventListener("change", (e) => {
+    state.sort = e.target.value;
+    state.sortDir = (state.sort === "price-asc" || state.sort === "commute") ? "asc" : "desc";
+    render();
+  });
+  els.reset.addEventListener("click", () => {
+    state.search = ""; state.tag = ""; state.maxBudget = 0; state.maxCommute = 0; state.minSchool = 0;
+    state.sort = "overall"; state.sortDir = "desc";
+    els.search.value = ""; els.budget.value = ""; els.commute.value = ""; els.school.value = ""; els.sort.value = "overall";
+    els.pills.forEach((p) => p.setAttribute("aria-pressed", p.dataset.tag === "" ? "true" : "false"));
+    render();
+  });
+  els.pills.forEach((p) => {
+    p.addEventListener("click", () => {
+      state.tag = p.dataset.tag;
+      els.pills.forEach((x) => x.setAttribute("aria-pressed", x === p ? "true" : "false"));
+      render();
+    });
+  });
+  els.th.forEach((th) => {
+    th.addEventListener("click", () => {
+      const key = th.getAttribute("data-sort");
+      if (state.sort === key || (state.sort === "price-asc" && key === "price")) {
+        state.sortDir = state.sortDir === "asc" ? "desc" : "asc";
+      } else {
+        state.sort = key;
+        state.sortDir = (key === "name" || key === "commute") ? "asc" : "desc";
+      }
+      els.sort.value = els.sort.querySelector('option[value="' + state.sort + '"]') ? state.sort : "overall";
+      render();
+    });
+  });
+  els.rows.addEventListener("click", (e) => {
+    const tr = e.target.closest("tr[data-id]");
+    if (!tr) return;
+    state.selectedId = tr.dataset.id;
+    render();
+  });
+  els.rows.addEventListener("keydown", (e) => {
+    if (e.key !== "Enter" && e.key !== " ") return;
+    const tr = e.target.closest("tr[data-id]");
+    if (!tr) return;
+    e.preventDefault();
+    state.selectedId = tr.dataset.id;
+    render();
+  });
+
+  render();
+})();
+</script>
+</body>
+</html>
