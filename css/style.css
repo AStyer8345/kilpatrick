@@ -408,6 +408,30 @@ body.nav-open { overflow: hidden; }
   gap: 80px;
   align-items: start;
 }
+.off-market-lede {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+.off-market-photo {
+  display: block;
+  margin-top: 8px;
+  position: relative;
+}
+.off-market-photo img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  filter: saturate(0.85);
+}
+.off-market-photo::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0,0,0,0) 60%, rgba(0,0,0,0.18) 100%);
+  pointer-events: none;
+}
 .off-market p { color: rgba(250, 248, 245, 0.78); }
 .off-market strong { color: var(--fg-emphasis-on-dark); }
 .off-market ul {
