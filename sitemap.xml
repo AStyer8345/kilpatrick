@@ -71,6 +71,11 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://www.crystalkilpatrick.com/neighborhoods/kyle-78640/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://www.crystalkilpatrick.com/neighborhoods/compare/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
