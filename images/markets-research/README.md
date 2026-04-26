@@ -1,8 +1,8 @@
 # Markets Research — Licensed Neighborhood Photography
 
 **Generated:** 2026-04-25
-**Last update:** 2026-04-26 (Wikimedia retry pass + Apify Unsplash supplement)
-**Folder note:** This was meant to land in `/Users/adamstyer/Documents/crystalkilpatrick/images/markets-research/` but Claude only had access to `/Users/adamstyer/Documents/Claude/Projects/kilpatrick/`. Move or symlink when you're ready.
+**Last update:** 2026-04-26 (10 photos wired into homepage Featured Markets cards; webp + jpg fallback)
+**Folder location:** Lives in the production repo at `/Users/adamstyer/Documents/crystalkilpatrick/images/markets-research/`. Served from `/images/markets-research/` on the deployed site.
 
 ## Final summary
 
@@ -67,11 +67,40 @@ Per-photo `attribution_string` is in `MANIFEST.json`. For CC-BY/CC-BY-SA images 
 6. **Dripping Springs** has 3 Hamilton Pool shots — consider one signature plus broader scenes to avoid repetition.
 7. **NPS Onion Creek shots** are public domain and require no attribution. Use freely.
 
+## Live wiring (as of 2026-04-26)
+
+10 of 47 photos are wired into the homepage Featured Markets cards. One landmark photo per market, optimized to webp at q80 / max-width 1600 (originals kept alongside as JPG fallback inside `<picture>`). All require CC attribution; per-card credit caption + `/credits/` page satisfies it.
+
+| Market | File | License |
+|---|---|---|
+| Belterra / Bear Creek 78737 | `belterra-bear-creek-78737/01-bear-creek-river-austin-texas.{jpg,webp}` | CC BY 4.0 (Larry D. Moore) |
+| Dripping Springs 78620 | `dripping-springs-78620/01-hamilton-pool-march-2016-1.{jpg,webp}` | CC BY-SA 4.0 (Larry D. Moore) |
+| Southwest Austin 78749 | `southwest-austin-maple-run-78749/01-violet-crown-trail-highway-290-trailhead-austin-2021.{jpg,webp}` | CC BY 4.0 |
+| Barton Creek 78735 | `barton-creek-78735/02-n2-barton-creek-tx-waterfall-1.{jpg,webp}` | CC BY 2.0 |
+| Buda 78610 | `buda-78610/05-buda-texas.{jpg,webp}` | CC BY-SA 3.0 |
+| Cedar Park 78613 | `cedar-park-78613/03-wilson-ledbetter-park-iron-bridge-2018.{jpg,webp}` | CC BY 4.0 |
+| Leander 78641 | `leander-78641/01-leander-texas.{jpg,webp}` | CC BY 2.0 |
+| New Braunfels | `new-braunfels/01-gruene-july-2017-1-gruene-hall.{jpg,webp}` | CC BY-SA 4.0 |
+| San Marcos 78666 | `san-marcos-78666/01-hays-county-courthouse-2018-san-marcos-tx.{jpg,webp}` | CC BY-SA 4.0 |
+| Far South Austin 78747 | `far-south-austin-78747/03-mckinney-falls-sp-entrance.{jpg,webp}` | CC BY 4.0 |
+
+**Buda swap note:** `01-downtown-gazebo`, `02-historic-downtown`, `03-carrington-house`, and `04-g-a-moore-son-building` all fail libjpeg-turbo decode (Wikimedia files carry Canon EXIF segments libjpeg won't read). Only `05-buda-texas.jpg` converts cleanly. To use the gazebo or another Buda landmark, re-download from the Wikimedia source page or run a `jpegtran -copy all` cleanup pass first.
+
+**Cedar Park swap note:** `01-cedar-park-depot-texas.jpg` was truncated on download (106KB for a 3840×2160 file). Wired in `03-wilson-ledbetter-park-iron-bridge-2018` instead — which is actually a stronger local landmark.
+
+**Skipped (commission needed):** Kyle 78640 and South Austin 78745 still ship as gradient + "Coming soon" overlay. See "Recommended next investments" below.
+
 ## How to refresh in the future
 
 ```bash
-cd /Users/adamstyer/Documents/Claude/Projects/kilpatrick/images/markets-research
+cd /Users/adamstyer/Documents/crystalkilpatrick/images/markets-research
 python3 finish-downloads.py   # idempotent — re-downloads anything missing
+```
+
+To regenerate a webp after swapping the source jpg (cwebp via Homebrew):
+
+```bash
+cwebp -q 80 -resize 1600 0 -metadata none <slug>/<file>.jpg -o <slug>/<file>.webp
 ```
 
 ## Recommended next investments
