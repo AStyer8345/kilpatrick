@@ -35,4 +35,24 @@
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
+  <url>
+    <loc>https://www.crystalkilpatrick.com/neighborhoods/belterra-bear-creek-78737/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.crystalkilpatrick.com/neighborhoods/south-austin-78745/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.crystalkilpatrick.com/neighborhoods/dripping-springs-78620/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.crystalkilpatrick.com/neighborhoods/southwest-austin-maple-run-78749/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
 </urlset>
