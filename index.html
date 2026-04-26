@@ -298,89 +298,187 @@
       </div>
       <p>A short list. Markets where Crystal actively works — not an SEO list of every Austin ZIP.</p>
     </div>
+    <!--
+      Photo wiring: licensed neighborhood photography in /images/markets-research/.
+      Source-of-truth manifest: /images/markets-research/MANIFEST.json
+      Public credit list: /credits/  (required for Wikimedia CC-BY / CC-BY-SA images)
+      First 4 cards eager-load (above-the-fold); remaining 6 lazy-load.
+    -->
     <div class="markets-grid">
       <a class="market js-track-cta" data-event="market_click" href="/neighborhoods/belterra-bear-creek-78737/">
-        <div class="market-photo market-photo--belterra" aria-hidden="true"></div>
+        <div class="market-photo">
+          <picture>
+            <source type="image/webp" srcset="/images/markets-research/belterra-bear-creek-78737/01-bear-creek-river-austin-texas.webp">
+            <img src="/images/markets-research/belterra-bear-creek-78737/01-bear-creek-river-austin-texas.jpg"
+                 alt="Bear Creek riparian corridor in southwest Austin"
+                 width="5712" height="4284"
+                 loading="eager" fetchpriority="high" decoding="async">
+          </picture>
+        </div>
         <div class="market-body">
           <p class="market-name">Belterra / Bear Creek</p>
           <p class="market-zip">78737 · Austin</p>
+          <p class="market-credit">Photo: Larry D. Moore · CC BY 4.0 · <a href="/credits/">credits</a></p>
         </div>
       </a>
       <a class="market js-track-cta" data-event="market_click" href="/neighborhoods/south-austin-78745/">
-        <div class="market-photo market-photo--south-austin" aria-hidden="true"></div>
+        <!-- TODO: South Austin (78745) is "below target" in MANIFEST.json — only generic Hill Country filler available. Commission a 78745-specific landmark shot (South Lamar / Garrison Park / Manchaca). See README.md "below target" section. -->
+        <div class="market-photo market-photo--coming-soon" aria-hidden="true"></div>
         <div class="market-body">
           <p class="market-name">South Austin</p>
           <p class="market-zip">78745</p>
         </div>
       </a>
       <a class="market js-track-cta" data-event="market_click" href="/neighborhoods/dripping-springs-78620/">
-        <div class="market-photo" aria-hidden="true"></div>
+        <div class="market-photo">
+          <picture>
+            <source type="image/webp" srcset="/images/markets-research/dripping-springs-78620/01-hamilton-pool-march-2016-1.webp">
+            <img src="/images/markets-research/dripping-springs-78620/01-hamilton-pool-march-2016-1.jpg"
+                 alt="Hamilton Pool Preserve limestone grotto and waterfall, Hays County"
+                 width="5888" height="2583"
+                 loading="eager" fetchpriority="high" decoding="async">
+          </picture>
+        </div>
         <div class="market-body">
           <p class="market-name">Dripping Springs</p>
           <p class="market-zip">78620</p>
+          <p class="market-credit">Photo: Larry D. Moore · CC BY-SA 4.0 · <a href="/credits/">credits</a></p>
         </div>
       </a>
       <a class="market js-track-cta" data-event="market_click" href="/neighborhoods/southwest-austin-maple-run-78749/">
-        <div class="market-photo" aria-hidden="true"></div>
+        <div class="market-photo">
+          <picture>
+            <source type="image/webp" srcset="/images/markets-research/southwest-austin-maple-run-78749/01-violet-crown-trail-highway-290-trailhead-austin-2021.webp">
+            <img src="/images/markets-research/southwest-austin-maple-run-78749/01-violet-crown-trail-highway-290-trailhead-austin-2021.jpg"
+                 alt="Violet Crown Trail trailhead, southwest Austin"
+                 width="1784" height="1190"
+                 loading="eager" fetchpriority="high" decoding="async">
+          </picture>
+        </div>
         <div class="market-body">
           <p class="market-name">Southwest Austin</p>
           <p class="market-zip">78749</p>
+          <p class="market-credit">Photo via Wikimedia Commons · CC BY 4.0 · <a href="/credits/">credits</a></p>
         </div>
       </a>
       <a class="market js-track-cta" data-event="market_click" href="/neighborhoods/">
-        <div class="market-photo market-photo--barton-creek" aria-hidden="true"></div>
+        <div class="market-photo">
+          <picture>
+            <source type="image/webp" srcset="/images/markets-research/barton-creek-78735/02-n2-barton-creek-tx-waterfall-1.webp">
+            <img src="/images/markets-research/barton-creek-78735/02-n2-barton-creek-tx-waterfall-1.jpg"
+                 alt="Barton Creek Greenbelt waterfall"
+                 width="3008" height="2000"
+                 loading="eager" fetchpriority="high" decoding="async">
+          </picture>
+        </div>
         <div class="market-body">
           <p class="market-name">Barton Creek / Lost Creek</p>
           <p class="market-zip">78735 · Austin</p>
+          <p class="market-credit">Photo via Wikimedia Commons · CC BY 2.0 · <a href="/credits/">credits</a></p>
         </div>
       </a>
       <a class="market js-track-cta" data-event="market_click" href="/neighborhoods/">
-        <div class="market-photo" aria-hidden="true"></div>
+        <div class="market-photo">
+          <picture>
+            <source type="image/webp" srcset="/images/markets-research/buda-78610/05-buda-texas.webp">
+            <img src="/images/markets-research/buda-78610/05-buda-texas.jpg"
+                 alt="Buda, Texas town view"
+                 width="2592" height="1944"
+                 loading="lazy" decoding="async">
+          </picture>
+        </div>
         <div class="market-body">
           <p class="market-name">Buda</p>
           <p class="market-zip">78610</p>
+          <p class="market-credit">Photo via Wikimedia Commons · CC BY-SA 3.0 · <a href="/credits/">credits</a></p>
         </div>
       </a>
       <a class="market js-track-cta" data-event="market_click" href="/neighborhoods/">
-        <div class="market-photo" aria-hidden="true"></div>
+        <div class="market-photo">
+          <picture>
+            <source type="image/webp" srcset="/images/markets-research/cedar-park-78613/03-wilson-ledbetter-park-iron-bridge-2018.webp">
+            <img src="/images/markets-research/cedar-park-78613/03-wilson-ledbetter-park-iron-bridge-2018.jpg"
+                 alt="Wilson Ledbetter Park iron bridge, Cedar Park"
+                 width="3200" height="1800"
+                 loading="lazy" decoding="async">
+          </picture>
+        </div>
         <div class="market-body">
           <p class="market-name">Cedar Park</p>
           <p class="market-zip">78613</p>
+          <p class="market-credit">Photo via Wikimedia Commons · CC BY 4.0 · <a href="/credits/">credits</a></p>
         </div>
       </a>
       <a class="market js-track-cta" data-event="market_click" href="/neighborhoods/">
-        <div class="market-photo" aria-hidden="true"></div>
+        <!-- TODO: Kyle (78640) is "below target" in MANIFEST.json — no neighborhood-specific Wikimedia / Pexels coverage. Commission an Old Town Kyle / Plum Creek / Lake Kyle landmark shot. See README.md "below target" section. -->
+        <div class="market-photo market-photo--coming-soon" aria-hidden="true"></div>
         <div class="market-body">
           <p class="market-name">Kyle</p>
           <p class="market-zip">78640</p>
         </div>
       </a>
       <a class="market js-track-cta" data-event="market_click" href="/neighborhoods/">
-        <div class="market-photo" aria-hidden="true"></div>
+        <div class="market-photo">
+          <picture>
+            <source type="image/webp" srcset="/images/markets-research/leander-78641/01-leander-texas.webp">
+            <img src="/images/markets-research/leander-78641/01-leander-texas.jpg"
+                 alt="Leander, Texas streetscape"
+                 width="3608" height="2518"
+                 loading="lazy" decoding="async">
+          </picture>
+        </div>
         <div class="market-body">
           <p class="market-name">Leander</p>
           <p class="market-zip">78641</p>
+          <p class="market-credit">Photo via Wikimedia Commons · CC BY 2.0 · <a href="/credits/">credits</a></p>
         </div>
       </a>
       <a class="market js-track-cta" data-event="market_click" href="/neighborhoods/">
-        <div class="market-photo market-photo--new-braunfels" aria-hidden="true"></div>
+        <div class="market-photo">
+          <picture>
+            <source type="image/webp" srcset="/images/markets-research/new-braunfels/01-gruene-july-2017-1-gruene-hall.webp">
+            <img src="/images/markets-research/new-braunfels/01-gruene-july-2017-1-gruene-hall.jpg"
+                 alt="Gruene Hall, Gruene historic district, New Braunfels"
+                 width="6000" height="4000"
+                 loading="lazy" decoding="async">
+          </picture>
+        </div>
         <div class="market-body">
           <p class="market-name">New Braunfels</p>
           <p class="market-zip">78130 / 78132</p>
+          <p class="market-credit">Photo via Wikimedia Commons · CC BY-SA 4.0 · <a href="/credits/">credits</a></p>
         </div>
       </a>
       <a class="market js-track-cta" data-event="market_click" href="/neighborhoods/">
-        <div class="market-photo" aria-hidden="true"></div>
+        <div class="market-photo">
+          <picture>
+            <source type="image/webp" srcset="/images/markets-research/san-marcos-78666/01-hays-county-courthouse-2018-san-marcos-tx.webp">
+            <img src="/images/markets-research/san-marcos-78666/01-hays-county-courthouse-2018-san-marcos-tx.jpg"
+                 alt="Hays County Courthouse, San Marcos"
+                 width="4280" height="2853"
+                 loading="lazy" decoding="async">
+          </picture>
+        </div>
         <div class="market-body">
           <p class="market-name">San Marcos</p>
           <p class="market-zip">78666</p>
+          <p class="market-credit">Photo via Wikimedia Commons · CC BY-SA 4.0 · <a href="/credits/">credits</a></p>
         </div>
       </a>
       <a class="market js-track-cta" data-event="market_click" href="/neighborhoods/">
-        <div class="market-photo" aria-hidden="true"></div>
+        <div class="market-photo">
+          <picture>
+            <source type="image/webp" srcset="/images/markets-research/far-south-austin-78747/03-mckinney-falls-sp-entrance.webp">
+            <img src="/images/markets-research/far-south-austin-78747/03-mckinney-falls-sp-entrance.jpg"
+                 alt="McKinney Falls State Park entrance, far south Austin"
+                 width="3600" height="2025"
+                 loading="lazy" decoding="async">
+          </picture>
+        </div>
         <div class="market-body">
           <p class="market-name">Far South Austin</p>
           <p class="market-zip">78747</p>
+          <p class="market-credit">Photo via Wikimedia Commons · CC BY 4.0 · <a href="/credits/">credits</a></p>
         </div>
       </a>
     </div>
@@ -498,6 +596,7 @@
         <div class="footer-disclosures">
           <a href="https://www.trec.texas.gov/sites/default/files/pdf-forms/IABS%201-0_1.pdf" target="_blank" rel="noopener">Information About Brokerage Services</a>
           <a href="https://www.trec.texas.gov/sites/default/files/pdf-forms/CN%201-2.pdf" target="_blank" rel="noopener">Texas Consumer Protection Notice</a>
+          <a href="/credits/">Photo Credits</a>
         </div>
         <div class="footer-eho">
           <span class="eho-icon" aria-hidden="true">EHO</span>

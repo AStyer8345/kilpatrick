@@ -495,16 +495,38 @@ body.nav-open { overflow: hidden; }
   background-size: cover;
   background-position: center;
   position: relative;
+  overflow: hidden;
 }
 .market-photo::after {
   content: "";
   position: absolute; inset: 0;
   background: var(--overlay-light);
+  pointer-events: none;
 }
-.market-photo--belterra { background-image: url("/images/markets/belterra-78737.jpg"); }
-.market-photo--south-austin { background-image: url("/images/markets/south-austin-78745.jpg"); }
-.market-photo--barton-creek { background-image: url("/images/markets/barton-creek-78735.jpg"); }
-.market-photo--new-braunfels { background-image: url("/images/markets/new-braunfels.jpg"); }
+.market-photo picture,
+.market-photo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.market-photo--coming-soon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.market-photo--coming-soon::before {
+  content: "Coming soon";
+  position: relative;
+  z-index: 1;
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  letter-spacing: 0.06em;
+  color: var(--text);
+  background: rgba(250, 248, 245, 0.82);
+  padding: 8px 16px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+}
 .market-body {
   padding: 22px 24px 24px;
 }
@@ -520,6 +542,14 @@ body.nav-open { overflow: hidden; }
   text-transform: uppercase;
   color: var(--text-secondary);
 }
+.market-credit {
+  font-size: 10.5px;
+  line-height: 1.4;
+  color: var(--text-secondary);
+  margin: 10px 0 0;
+  opacity: 0.75;
+}
+.market-credit a { color: inherit; text-decoration: underline; text-decoration-color: rgba(0, 0, 0, 0.2); }
 
 /* =================================================================
    TESTIMONIALS
