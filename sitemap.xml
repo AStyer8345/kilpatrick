@@ -76,6 +76,21 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://www.crystalkilpatrick.com/neighborhoods/circle-c-ranch-78739/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.crystalkilpatrick.com/neighborhoods/westlake-78746/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.crystalkilpatrick.com/neighborhoods/shady-hollow-78739-78748/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://www.crystalkilpatrick.com/neighborhoods/compare/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>

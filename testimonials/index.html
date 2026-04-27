@@ -3,9 +3,20 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Reviews — Crystal Kilpatrick Group</title>
-<meta name="description" content="Reviews from Austin buyers and sellers — relocation buyers, repeat clients, and stalled-listing turnarounds. Full reviews page lands in Sprint 2.">
+<title>Crystal Kilpatrick Reviews — Real Stories from Austin Buyers &amp; Sellers</title>
+<meta name="description" content="5.0 stars across 34 Google reviews — relocation buyers, repeat clients, first-time buyers, and stalled-listing turnarounds. Read what Austin clients say about the Crystal Kilpatrick Group.">
 <link rel="canonical" href="https://www.crystalkilpatrick.com/testimonials/">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Crystal Kilpatrick Reviews — Real Stories from Austin Buyers &amp; Sellers">
+<meta property="og:description" content="5.0 stars across 34 Google reviews — relocation buyers, repeat clients, first-time buyers, and stalled-listing turnarounds.">
+<meta property="og:url" content="https://www.crystalkilpatrick.com/testimonials/">
+<meta name="twitter:card" content="summary_large_image">
+<meta property="og:image" content="https://www.crystalkilpatrick.com/images/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Crystal Kilpatrick Group — Austin real estate since 2000">
+<meta name="twitter:image" content="https://www.crystalkilpatrick.com/images/og-image.jpg">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,15 +25,161 @@
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon.svg">
 <link rel="stylesheet" href="/css/style.css">
 
+<!-- Page-scoped styling for the aggregate proof bar, featured pull quote, and category callouts.
+     Per project rule: do NOT edit /css/style.css. Inline styles + this scoped block only. -->
+<style>
+  .reviews-aggregate {
+    text-align: center;
+    padding: 8px 0 32px;
+  }
+  .reviews-aggregate-stars {
+    font-size: 28px;
+    letter-spacing: 6px;
+    color: var(--gold);
+    display: block;
+    margin-bottom: 12px;
+  }
+  .reviews-aggregate-line {
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--text-secondary);
+    margin: 0;
+  }
+  .reviews-aggregate-line strong { color: var(--text); font-weight: 600; }
+
+  .reviews-featured {
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    padding: 72px 0;
+    margin: 24px 0 16px;
+    text-align: center;
+  }
+  .reviews-featured blockquote {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-weight: 400;
+    font-size: clamp(24px, 3.6vw, 38px);
+    line-height: 1.35;
+    color: var(--text);
+    max-width: 28ch;
+    margin: 0 auto 28px;
+    quotes: "\201C" "\201D";
+  }
+  .reviews-featured blockquote::before { content: open-quote; margin-right: 4px; }
+  .reviews-featured blockquote::after  { content: close-quote; margin-left: 4px; }
+  .reviews-featured cite {
+    font-style: normal;
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--gold);
+    display: block;
+  }
+  .reviews-featured cite span {
+    display: block;
+    margin-top: 6px;
+    color: var(--text-secondary);
+    letter-spacing: 0.04em;
+    text-transform: none;
+    font-size: 13px;
+  }
+
+  .reviews-categories {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    padding: 56px 0;
+  }
+  .reviews-category {
+    text-align: center;
+    padding: 24px 16px;
+    border: 1px solid var(--border);
+    background: var(--bg-white);
+  }
+  .reviews-category strong {
+    display: block;
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 32px;
+    line-height: 1;
+    color: var(--gold);
+    margin-bottom: 10px;
+  }
+  .reviews-category span {
+    display: block;
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    letter-spacing: 0.04em;
+    color: var(--text-secondary);
+  }
+  @media (max-width: 760px) {
+    .reviews-categories { grid-template-columns: 1fr; }
+    .reviews-featured { padding: 48px 0; }
+  }
+</style>
+
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@graph": [
-    {"@type": "WebPage", "url": "https://www.crystalkilpatrick.com/testimonials/", "name": "Reviews — Crystal Kilpatrick Group", "about": {"@id": "https://www.crystalkilpatrick.com/#agent"}},
-    {"@type": "BreadcrumbList", "itemListElement": [
-      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.crystalkilpatrick.com/"},
-      {"@type": "ListItem", "position": 2, "name": "Reviews", "item": "https://www.crystalkilpatrick.com/testimonials/"}
-    ]}
+    {
+      "@type": "WebPage",
+      "url": "https://www.crystalkilpatrick.com/testimonials/",
+      "name": "Crystal Kilpatrick Reviews — Real Stories from Austin Buyers & Sellers",
+      "about": {"@id": "https://www.crystalkilpatrick.com/#agent"}
+    },
+    {
+      "@type": "RealEstateAgent",
+      "@id": "https://www.crystalkilpatrick.com/#agent",
+      "name": "Crystal Kilpatrick Group",
+      "url": "https://www.crystalkilpatrick.com/",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5.0",
+        "bestRating": "5",
+        "worstRating": "1",
+        "ratingCount": 34,
+        "reviewCount": 34
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.crystalkilpatrick.com/"},
+        {"@type": "ListItem", "position": 2, "name": "Reviews", "item": "https://www.crystalkilpatrick.com/testimonials/"}
+      ]
+    },
+    {"@type": "Review", "author": {"@type": "Person", "name": "Laura Comstock"}, "datePublished": "2024", "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"}, "reviewBody": "Crystal was instrumental when we decided to move from Chicago to Austin in 2010 helping us purchase our dream home. We made the decision to move in 2024 out of state. She connected us with an exceptional agent for that transaction.", "itemReviewed": {"@id": "https://www.crystalkilpatrick.com/#agent"}},
+    {"@type": "Review", "author": {"@type": "Person", "name": "Ryan Cunningham"}, "datePublished": "2024", "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"}, "reviewBody": "Crystal was an absolute dream to work with! As first-time homebuyers, she made everything seamless, educating us every step of the way. Her expertise and dedication truly shined when she navigated us through a competitive bidding war.", "itemReviewed": {"@id": "https://www.crystalkilpatrick.com/#agent"}},
+    {"@type": "Review", "author": {"@type": "Person", "name": "Jason Meikle"}, "datePublished": "2023", "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"}, "reviewBody": "Crystal and her team did a great job getting my wife and our family our dream house. She was there throughout the process and gave good guidance and support at every step. It seems she had great options for every third-party need we had.", "itemReviewed": {"@id": "https://www.crystalkilpatrick.com/#agent"}},
+    {"@type": "Review", "author": {"@type": "Person", "name": "Tiffany"}, "datePublished": "2021", "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"}, "reviewBody": "If you want a realtor who is committed to understanding your needs and wants when it comes to buying a home, look no further than the Crystal Kilpatrick Group. Not only did Crystal ensure we found a home that met our needs, she was our advocate and champion through the entire process.", "itemReviewed": {"@id": "https://www.crystalkilpatrick.com/#agent"}},
+    {"@type": "Review", "author": {"@type": "Person", "name": "Margret Carswell"}, "datePublished": "2020", "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"}, "reviewBody": "Crystal Kilpatrick is awesome. She provided quick, easy explanations each step of the way on the purchase of my new home. With her guidance, I was able to get the property inspected, appraised, financed & closed in 35 days. Her passion for what she does shines through.", "itemReviewed": {"@id": "https://www.crystalkilpatrick.com/#agent"}},
+    {"@type": "Review", "author": {"@type": "Person", "name": "Terri Warnock"}, "datePublished": "2022", "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"}, "reviewBody": "Crystal Kilpatrick Group was a superior team to help us get our home sold very quickly. Every detail was handled efficiently and professionally from assisting with staging, beautiful photography for the listing as well as guiding us throughout the process.", "itemReviewed": {"@id": "https://www.crystalkilpatrick.com/#agent"}},
+    {"@type": "Review", "author": {"@type": "Person", "name": "Crystal McQueeney"}, "datePublished": "2023", "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"}, "reviewBody": "From beginning to end, Crystal took care of us. Her knowledge, motivation and tenacity was key in finding us the best home for our family. She understands the market and was able to guide us in a way that made us feel extremely confident about the entire process. We will be looking to Crystal for our future real estate needs.", "itemReviewed": {"@id": "https://www.crystalkilpatrick.com/#agent"}},
+    {"@type": "Review", "author": {"@type": "Person", "name": "Mark Shepherd"}, "datePublished": "2017", "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"}, "reviewBody": "Crystal helped us buy our first house and was great! She is very responsive and positive during the uncertain process of buying your first house. She even recommended we pass on a house that looked like it may have bigger issues to her trained eye.", "itemReviewed": {"@id": "https://www.crystalkilpatrick.com/#agent"}},
+    {"@type": "Review", "author": {"@type": "Person", "name": "Mayra Peña"}, "datePublished": "2020", "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"}, "reviewBody": "We were out-of-town buyers and were referred to Crystal from our previous realtor Kristen Schramme in San Antonio. Being out of town buyers, we couldn't make many trips to Austin, and Crystal always made herself available to our schedule.", "itemReviewed": {"@id": "https://www.crystalkilpatrick.com/#agent"}},
+    {"@type": "Review", "author": {"@type": "Person", "name": "Bryanne Mayo"}, "datePublished": "2022", "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"}, "reviewBody": "Crystal and her team have been amazing to work with! They take great care of their clients and their knowledge of the market helps ensure you make an informed choice when buying. Highly recommend.", "itemReviewed": {"@id": "https://www.crystalkilpatrick.com/#agent"}},
+    {"@type": "Review", "author": {"@type": "Person", "name": "Robert Crumley"}, "datePublished": "2022", "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"}, "reviewBody": "Crystal is the best!! Super friendly and knowledgeable is selling homes. She was able to sell our house in 9 days!!! I have and will continue to recommend her to anyone buying or selling a home!", "itemReviewed": {"@id": "https://www.crystalkilpatrick.com/#agent"}},
+    {"@type": "Review", "author": {"@type": "Person", "name": "Gabriele Brown"}, "datePublished": "2022", "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"}, "reviewBody": "Crystal Kilpatrick Group at Keller Williams Realty not only sold my house but also helped me to buy a new one. She was very responsive, kind, and a constant professional from start to finish. If you sell or buy a house, I recommend you go with the Crystal Kilpatrick Group.", "itemReviewed": {"@id": "https://www.crystalkilpatrick.com/#agent"}},
+    {"@type": "Review", "author": {"@type": "Person", "name": "Julie Kuntz"}, "datePublished": "2022", "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"}, "reviewBody": "Crystal is a great Realtor and always has her clients best interest as her primary focus. Crystal is kind and truly cares for all the people she works with. Refreshing to see this kind of focus in business.", "itemReviewed": {"@id": "https://www.crystalkilpatrick.com/#agent"}},
+    {"@type": "Review", "author": {"@type": "Person", "name": "Adam M."}, "datePublished": "2020", "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"}, "reviewBody": "Crystal is amazing. Her personality has to be by far one of the most caring and compassionate I have ever seen. She is always there to listen when you need her and ready to execute when the time is right. You won't be disappointed.", "itemReviewed": {"@id": "https://www.crystalkilpatrick.com/#agent"}},
+    {"@type": "Review", "author": {"@type": "Person", "name": "Jamie Rose"}, "datePublished": "2023", "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"}, "reviewBody": "I highly recommend Crystal. She is very professional, knowledgeable, and responsive. Her expertise was invaluable throughout the home buying process, and I'm thrilled with the end result.", "itemReviewed": {"@id": "https://www.crystalkilpatrick.com/#agent"}},
+    {"@type": "Review", "author": {"@type": "Person", "name": "Josh McDaniel"}, "datePublished": "2022", "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"}, "reviewBody": "Crystal and her team do an amazing job of finding you the home of your dreams, and your next investment property. Whether a first time buyer or finding that forever home, the Kilpatrick group find it for you.", "itemReviewed": {"@id": "https://www.crystalkilpatrick.com/#agent"}},
+    {"@type": "Review", "author": {"@type": "Person", "name": "Trey Baumann"}, "datePublished": "2022", "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"}, "reviewBody": "Crystal and her team are 2nd to none. First class service with the experience and knowledge needed to navigate the complicated Central Texas real estate landscape. Highly recommend!", "itemReviewed": {"@id": "https://www.crystalkilpatrick.com/#agent"}},
+    {"@type": "Review", "author": {"@type": "Person", "name": "Bonnie Villacampa"}, "datePublished": "2022", "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"}, "reviewBody": "Crystal is the person to call if you ever know of anyone in need of an experienced professional Realtor. She has helped me and so many friends that I know. Thanks Crystal.", "itemReviewed": {"@id": "https://www.crystalkilpatrick.com/#agent"}},
+    {"@type": "Review", "author": {"@type": "Person", "name": "John A. Perez"}, "datePublished": "2024", "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"}, "reviewBody": "I have had the privilege of working with Crystal on several transactions. She is one of the best that I've had the opportunity to work with.", "itemReviewed": {"@id": "https://www.crystalkilpatrick.com/#agent"}},
+    {"@type": "Review", "author": {"@type": "Person", "name": "Lilly Bullion"}, "datePublished": "2022", "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"}, "reviewBody": "Crystal is a very sweet and patient lady whom I have worked with, and I recommend you use her as your residential Realtor in the Austin area.", "itemReviewed": {"@id": "https://www.crystalkilpatrick.com/#agent"}},
+    {"@type": "Review", "author": {"@type": "Person", "name": "Jerry L. Brooks"}, "datePublished": "2022", "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"}, "reviewBody": "I've worked with Crystal and let me tell you, she is easily the #1 in Austin to work with by far, very friendly and personable and pleasure to work with!", "itemReviewed": {"@id": "https://www.crystalkilpatrick.com/#agent"}},
+    {"@type": "Review", "author": {"@type": "Person", "name": "Robin Wurzel"}, "datePublished": "2022", "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"}, "reviewBody": "Crystal Kilpatrick is the realtor you want to represent you if you are the buyer or seller! Can't say enough about her energy and professionalism.", "itemReviewed": {"@id": "https://www.crystalkilpatrick.com/#agent"}},
+    {"@type": "Review", "author": {"@type": "Person", "name": "Lori Wilson"}, "datePublished": "2022", "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"}, "reviewBody": "Crystal was knowledgeable and very friendly, she fought for us with the builder and closing issues and delays, couldn't have asked for a better realtor and made a new friend in the process!", "itemReviewed": {"@id": "https://www.crystalkilpatrick.com/#agent"}},
+    {"@type": "Review", "author": {"@type": "Person", "name": "Jeff Jones"}, "datePublished": "2022", "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"}, "reviewBody": "Crystal is incredibly professional and personable. Having her on your side for your home will be amazing!", "itemReviewed": {"@id": "https://www.crystalkilpatrick.com/#agent"}},
+    {"@type": "Review", "author": {"@type": "Person", "name": "Kevin S."}, "datePublished": "2022", "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"}, "reviewBody": "Crystal is amazing. She understands this area and the market. She is wonderful to work with and always looks out for you.", "itemReviewed": {"@id": "https://www.crystalkilpatrick.com/#agent"}},
+    {"@type": "Review", "author": {"@type": "Person", "name": "Kent Black"}, "datePublished": "2023", "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"}, "reviewBody": "Crystal Kilpatrick is an excellent realtor and always goes the extra mile. I highly recommend her!", "itemReviewed": {"@id": "https://www.crystalkilpatrick.com/#agent"}},
+    {"@type": "Review", "author": {"@type": "Person", "name": "Stanley Coan"}, "datePublished": "2023", "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"}, "reviewBody": "Overall best experience we've had buying and selling our homes. Thank you Crystal for all your hard work!", "itemReviewed": {"@id": "https://www.crystalkilpatrick.com/#agent"}},
+    {"@type": "Review", "author": {"@type": "Person", "name": "Gerard Juarez"}, "datePublished": "2023", "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"}, "reviewBody": "Crystal was great to work with and very attentive throughout the entire process!", "itemReviewed": {"@id": "https://www.crystalkilpatrick.com/#agent"}},
+    {"@type": "Review", "author": {"@type": "Person", "name": "Buda's Brightside"}, "datePublished": "2022", "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"}, "reviewBody": "Detail oriented when helping customers. Our go to realtor for friends and family!", "itemReviewed": {"@id": "https://www.crystalkilpatrick.com/#agent"}},
+    {"@type": "Review", "author": {"@type": "Person", "name": "Bill Jones"}, "datePublished": "2018", "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"}, "reviewBody": "Need help with real estate? Call Crystal, very knowledgeable and a pleasure to work with.", "itemReviewed": {"@id": "https://www.crystalkilpatrick.com/#agent"}}
   ]
 }
 </script>
@@ -31,9 +188,17 @@
 
 <a class="skip-link" href="#main">Skip to main content</a>
 
+<!-- ============================ NAV ============================ -->
 <header class="site-nav is-inner" id="siteNav">
   <div class="container">
-    <a class="brand" href="/" aria-label="Crystal Kilpatrick Group home"><span class="brand-name">Crystal Kilpatrick Group</span><span class="brand-sub">Keller Williams Realty</span></a>
+    <ul class="nav-social" aria-label="Social profiles">
+        <li><a href="https://www.instagram.com/crystalkilpatrickgroup/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.6" fill="currentColor" stroke="none"/></svg></a></li>
+        <li><a href="https://www.facebook.com/crystalkilpatrickgroup/" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.5 21v-7.5h2.5l.4-3h-2.9V8.6c0-.9.25-1.5 1.5-1.5h1.6V4.4c-.3 0-1.2-.1-2.3-.1-2.3 0-3.8 1.4-3.8 3.9v2.2H8v3h2.5V21h3z"/></svg></a></li>
+        <li><a href="https://www.youtube.com/channel/UCIJLk34TXwYeWNP3xanRSNQ" target="_blank" rel="noopener" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M21.6 7.2c-.2-.9-.9-1.6-1.8-1.8C18.2 5 12 5 12 5s-6.2 0-7.8.4c-.9.2-1.6.9-1.8 1.8C2 8.8 2 12 2 12s0 3.2.4 4.8c.2.9.9 1.6 1.8 1.8C5.8 19 12 19 12 19s6.2 0 7.8-.4c.9-.2 1.6-.9 1.8-1.8.4-1.6.4-4.8.4-4.8s0-3.2-.4-4.8zM10 15V9l5.2 3L10 15z"/></svg></a></li>
+        <li><a href="https://www.linkedin.com/in/crystalkilpatrick" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S.02 4.88.02 3.5C.02 2.12 1.13 1 2.5 1s2.48 1.12 2.48 2.5zM.22 8h4.56v14H.22V8zm7.5 0h4.37v1.92h.06c.61-1.15 2.1-2.36 4.32-2.36 4.62 0 5.47 3.04 5.47 6.99V22h-4.56v-6.18c0-1.47-.03-3.36-2.05-3.36-2.05 0-2.36 1.6-2.36 3.25V22H7.72V8z"/></svg></a></li>
+        <li><a href="https://www.zillow.com/profile/crystalaustinrealtor" target="_blank" rel="noopener" aria-label="Zillow"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2L2 9.5l1.4 1.7L5 10v10h4v-6h6v6h4V10l1.6 1.2L22 9.5 12 2zm-3 12l3.5-2.5L15 13l-3 2.2L9 14z"/></svg></a></li>
+      </ul>
+        <a class="brand" href="/" aria-label="Crystal Kilpatrick Group home"><span class="brand-name">Crystal Kilpatrick Group</span><span class="brand-sub">Keller Williams Realty</span></a>
     <nav aria-label="Primary"><ul class="nav-links">
       <li><a href="/buy/">Buy</a></li>
       <li class="nav-sep" aria-hidden="true">|</li>
@@ -50,18 +215,12 @@
     <div class="nav-actions">
       <a class="nav-phone js-track-cta" data-event="phone_click" href="tel:+15126805835">512-680-5835</a>
       <a class="button nav-cta js-track-cta" data-event="calendly_click" href="https://calendly.com/crystalkilpatrick" target="_blank" rel="noopener">Schedule a Consult</a>
-      <ul class="nav-social" aria-label="Social profiles">
-        <li><a href="https://www.instagram.com/crystalkilpatrickgroup/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.6" fill="currentColor" stroke="none"/></svg></a></li>
-        <li><a href="https://www.facebook.com/crystalkilpatrickgroup/" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.5 21v-7.5h2.5l.4-3h-2.9V8.6c0-.9.25-1.5 1.5-1.5h1.6V4.4c-.3 0-1.2-.1-2.3-.1-2.3 0-3.8 1.4-3.8 3.9v2.2H8v3h2.5V21h3z"/></svg></a></li>
-        <li><a href="https://www.youtube.com/channel/UCIJLk34TXwYeWNP3xanRSNQ" target="_blank" rel="noopener" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M21.6 7.2c-.2-.9-.9-1.6-1.8-1.8C18.2 5 12 5 12 5s-6.2 0-7.8.4c-.9.2-1.6.9-1.8 1.8C2 8.8 2 12 2 12s0 3.2.4 4.8c.2.9.9 1.6 1.8 1.8C5.8 19 12 19 12 19s6.2 0 7.8-.4c.9-.2 1.6-.9 1.8-1.8.4-1.6.4-4.8.4-4.8s0-3.2-.4-4.8zM10 15V9l5.2 3L10 15z"/></svg></a></li>
-        <li><a href="https://www.linkedin.com/in/crystalkilpatrick" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S.02 4.88.02 3.5C.02 2.12 1.13 1 2.5 1s2.48 1.12 2.48 2.5zM.22 8h4.56v14H.22V8zm7.5 0h4.37v1.92h.06c.61-1.15 2.1-2.36 4.32-2.36 4.62 0 5.47 3.04 5.47 6.99V22h-4.56v-6.18c0-1.47-.03-3.36-2.05-3.36-2.05 0-2.36 1.6-2.36 3.25V22H7.72V8z"/></svg></a></li>
-        <li><a href="https://www.zillow.com/profile/crystalaustinrealtor" target="_blank" rel="noopener" aria-label="Zillow"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2L2 9.5l1.4 1.7L5 10v10h4v-6h6v6h4V10l1.6 1.2L22 9.5 12 2zm-3 12l3.5-2.5L15 13l-3 2.2L9 14z"/></svg></a></li>
-      </ul>
       <button class="nav-toggle" type="button" aria-label="Open menu" aria-controls="mobileNav" aria-expanded="false"><span></span></button>
     </div>
   </div>
 </header>
 
+<!-- mobile nav -->
 <div class="mobile-nav" id="mobileNav" aria-hidden="true">
   <div class="mobile-nav-head">
     <a class="brand" href="/"><span class="brand-name">Crystal Kilpatrick Group</span><span class="brand-sub">Keller Williams Realty</span></a>
@@ -78,54 +237,105 @@
 
 <main id="main">
 
+<!-- ============================ HERO ============================ -->
 <section class="container reviews-page-head">
   <p class="eyebrow">Client Reviews · 5.0 ★ on Google</p>
   <h1>What clients say after the transaction closes.</h1>
-  <p>Every review below was posted publicly by a past client of the Crystal Kilpatrick Group. See the full collection on <a href="https://www.google.com/search?q=Crystal+Kilpatrick+Group+Keller+Williams+Realty" target="_blank" rel="noopener" style="color:var(--gold); border-bottom: 1px solid var(--gold);">Google</a> or <a href="https://www.zillow.com/profile/crystalaustinrealtor" target="_blank" rel="noopener" style="color:var(--gold); border-bottom: 1px solid var(--gold);">Zillow</a>.</p>
+  <p>Every review below was posted publicly by a past client of the Crystal Kilpatrick Group. 5.0 stars across 34 Google reviews — relocation buyers, repeat clients, first-time buyers, and stalled-listing turnarounds. <a href="https://www.google.com/search?q=Crystal+Kilpatrick+Group+Keller+Williams+Realty" target="_blank" rel="noopener" style="color:var(--gold); border-bottom: 1px solid var(--gold);">Read more on Google</a>.</p>
+</section>
+
+<!-- ============================ AGGREGATE PROOF BAR ============================ -->
+<section class="container reviews-aggregate" aria-label="Aggregate rating">
+  <span class="reviews-aggregate-stars" aria-label="5 out of 5 stars">★★★★★</span>
+  <p class="reviews-aggregate-line"><strong>5.0</strong> average across <strong>34</strong> Google reviews</p>
+</section>
+
+<!-- ============================ FEATURED PULL QUOTE ============================ -->
+<!-- Featured quote: Margret Carswell — picked for the most concrete, verifiable outcome
+     (35-day close start to finish). Aligns with voice-guide.md §4: "Numbers, not adjectives." -->
+<section class="container reviews-featured" aria-label="Featured client review">
+  <blockquote>I was able to get the property inspected, appraised, financed and closed in 35 days.</blockquote>
+  <cite>Margret Carswell<span>Buyer · Closed in 35 days · Google review</span></cite>
+</section>
+
+<!-- ============================ REVIEWS GRID — ALL 30 ============================ -->
+<!-- Source of truth: /data/reviews.json. All 30 captured reviews rendered below.
+     If reviews are added or edited, update reviews.json first, then mirror here AND
+     into the JSON-LD Review array in <head> AND into the homepage marquee. -->
+<section class="container">
+  <div class="reviews-page-grid">
+    <article class="testimonial"><span class="testimonial-stars" aria-label="5 out of 5 stars">★★★★★</span><blockquote>Crystal was instrumental when we decided to move from Chicago to Austin in 2010 helping us purchase our dream home. When we moved out of state in 2024, she connected us with an exceptional agent for that transaction.</blockquote><cite>Laura Comstock<span>Repeat client · Chicago → Austin → out of state · 2024</span></cite></article>
+    <article class="testimonial"><span class="testimonial-stars" aria-label="5 out of 5 stars">★★★★★</span><blockquote>As first-time homebuyers, she made everything seamless, educating us every step of the way. Her expertise and dedication truly shined when she navigated us through a competitive bidding war.</blockquote><cite>Ryan Cunningham<span>First-time buyers · Competitive bidding war · 2024</span></cite></article>
+    <article class="testimonial"><span class="testimonial-stars" aria-label="5 out of 5 stars">★★★★★</span><blockquote>Crystal and her team did a great job getting my wife and our family our dream house. She was there throughout the process and gave good guidance and support at every step.</blockquote><cite>Jason Meikle<span>Family home buyer · 2023</span></cite></article>
+    <article class="testimonial"><span class="testimonial-stars" aria-label="5 out of 5 stars">★★★★★</span><blockquote>If you want a realtor who is committed to understanding your needs and wants when it comes to buying a home, look no further than the Crystal Kilpatrick Group. Crystal was our advocate and champion through the entire process.</blockquote><cite>Tiffany<span>Stress-free buyer experience · 2021</span></cite></article>
+    <article class="testimonial"><span class="testimonial-stars" aria-label="5 out of 5 stars">★★★★★</span><blockquote>Crystal Kilpatrick is awesome. She provided quick, easy explanations each step of the way on the purchase of my new home. With her guidance, I was able to get the property inspected, appraised, financed &amp; closed in 35 days.</blockquote><cite>Margret Carswell<span>Closed in 35 days · 2020</span></cite></article>
+    <article class="testimonial"><span class="testimonial-stars" aria-label="5 out of 5 stars">★★★★★</span><blockquote>Crystal Kilpatrick Group was a superior team to help us get our home sold very quickly. Every detail was handled efficiently and professionally — from staging, to beautiful photography, to guiding us through every step.</blockquote><cite>Terri Warnock<span>Listing · Sold quickly · 2022</span></cite></article>
+    <article class="testimonial"><span class="testimonial-stars" aria-label="5 out of 5 stars">★★★★★</span><blockquote>From beginning to end, Crystal took care of us. Her knowledge, motivation and tenacity was key in finding us the best home for our family. We will be looking to Crystal for our future real estate needs.</blockquote><cite>Crystal McQueeney<span>Family home buyer · 2023</span></cite></article>
+    <article class="testimonial"><span class="testimonial-stars" aria-label="5 out of 5 stars">★★★★★</span><blockquote>Crystal helped us buy our first house and was great. She is very responsive and positive during the uncertain process of buying your first house. She even recommended we pass on a house that looked like it may have bigger issues.</blockquote><cite>Mark Shepherd<span>First-time buyer · 2017</span></cite></article>
+    <article class="testimonial"><span class="testimonial-stars" aria-label="5 out of 5 stars">★★★★★</span><blockquote>We were out-of-town buyers. Being out of town, we couldn't make many trips to Austin, and Crystal always made herself available to our schedule.</blockquote><cite>Mayra Peña<span>Out-of-town buyer · San Antonio referral · 2020</span></cite></article>
+    <article class="testimonial"><span class="testimonial-stars" aria-label="5 out of 5 stars">★★★★★</span><blockquote>Crystal and her team have been amazing to work with. They take great care of their clients and their knowledge of the market helps ensure you make an informed choice when buying. Highly recommend.</blockquote><cite>Bryanne Mayo<span>Buyer · Market expertise · 2022</span></cite></article>
+    <article class="testimonial"><span class="testimonial-stars" aria-label="5 out of 5 stars">★★★★★</span><blockquote>Crystal is the best. Super friendly and knowledgeable selling homes. She was able to sell our house in 9 days. I have and will continue to recommend her to anyone buying or selling a home.</blockquote><cite>Robert Crumley<span>Sold in 9 days · 2022</span></cite></article>
+    <article class="testimonial"><span class="testimonial-stars" aria-label="5 out of 5 stars">★★★★★</span><blockquote>Crystal Kilpatrick Group not only sold my house but also helped me to buy a new one. She was very responsive, kind, and a constant professional from start to finish.</blockquote><cite>Gabriele Brown<span>Buy + sell · Same agent · 2022</span></cite></article>
+    <article class="testimonial"><span class="testimonial-stars" aria-label="5 out of 5 stars">★★★★★</span><blockquote>Crystal is a great Realtor and always has her clients' best interest as her primary focus. Kind and truly cares for all the people she works with — refreshing to see this kind of focus in business.</blockquote><cite>Julie Kuntz<span>Client-first focus · 2022</span></cite></article>
+    <article class="testimonial"><span class="testimonial-stars" aria-label="5 out of 5 stars">★★★★★</span><blockquote>Crystal is amazing. Her personality has to be by far one of the most caring and compassionate I have ever seen. Always there to listen when you need her and ready to execute when the time is right.</blockquote><cite>Adam M.<span>Caring · Compassionate · 2020</span></cite></article>
+    <article class="testimonial"><span class="testimonial-stars" aria-label="5 out of 5 stars">★★★★★</span><blockquote>I highly recommend Crystal. She is very professional, knowledgeable, and responsive. Her expertise was invaluable throughout the home buying process, and I'm thrilled with the end result.</blockquote><cite>Jamie Rose<span>Buyer · Professional + responsive · 2023</span></cite></article>
+    <article class="testimonial"><span class="testimonial-stars" aria-label="5 out of 5 stars">★★★★★</span><blockquote>Crystal and her team do an amazing job of finding you the home of your dreams, and your next investment property. Whether a first-time buyer or finding that forever home, the Kilpatrick group find it for you.</blockquote><cite>Josh McDaniel<span>Forever home + investment · 2022</span></cite></article>
+    <article class="testimonial"><span class="testimonial-stars" aria-label="5 out of 5 stars">★★★★★</span><blockquote>Crystal and her team are 2nd to none. First-class service with the experience and knowledge needed to navigate the complicated Central Texas real estate landscape. Highly recommend.</blockquote><cite>Trey Baumann<span>Central Texas expertise · 2022</span></cite></article>
+    <article class="testimonial"><span class="testimonial-stars" aria-label="5 out of 5 stars">★★★★★</span><blockquote>Crystal is the person to call if you ever know of anyone in need of an experienced, professional Realtor. She has helped me and so many friends that I know.</blockquote><cite>Bonnie Villacampa<span>Repeat referrer · 2022</span></cite></article>
+    <article class="testimonial"><span class="testimonial-stars" aria-label="5 out of 5 stars">★★★★★</span><blockquote>I have had the privilege of working with Crystal on several transactions. She is one of the best that I've had the opportunity to work with.</blockquote><cite>John A. Perez<span>Multiple transactions · 2024</span></cite></article>
+    <article class="testimonial"><span class="testimonial-stars" aria-label="5 out of 5 stars">★★★★★</span><blockquote>Crystal is a very sweet and patient lady whom I have worked with, and I recommend you use her as your residential Realtor in the Austin area.</blockquote><cite>Lilly Bullion<span>Austin residential · 2022</span></cite></article>
+    <article class="testimonial"><span class="testimonial-stars" aria-label="5 out of 5 stars">★★★★★</span><blockquote>I've worked with Crystal and let me tell you, she is easily the #1 in Austin to work with by far — very friendly and personable and a pleasure to work with.</blockquote><cite>Jerry L. Brooks<span>#1 in Austin · 2022</span></cite></article>
+    <article class="testimonial"><span class="testimonial-stars" aria-label="5 out of 5 stars">★★★★★</span><blockquote>Crystal Kilpatrick is the realtor you want to represent you whether you're the buyer or seller. Can't say enough about her energy and professionalism.</blockquote><cite>Robin Wurzel<span>Buyer or seller representation · 2022</span></cite></article>
+    <article class="testimonial"><span class="testimonial-stars" aria-label="5 out of 5 stars">★★★★★</span><blockquote>Crystal was knowledgeable and very friendly. She fought for us with the builder and closing issues and delays. Couldn't have asked for a better realtor — and made a new friend in the process.</blockquote><cite>Lori Wilson<span>New construction · Builder advocate · 2022</span></cite></article>
+    <article class="testimonial"><span class="testimonial-stars" aria-label="5 out of 5 stars">★★★★★</span><blockquote>Crystal is incredibly professional and personable. Having her on your side for your home will be amazing.</blockquote><cite>Jeff Jones<span>Professional + personable · 2022</span></cite></article>
+    <article class="testimonial"><span class="testimonial-stars" aria-label="5 out of 5 stars">★★★★★</span><blockquote>Crystal is amazing. She understands this area and the market. She is wonderful to work with and always looks out for you.</blockquote><cite>Kevin S.<span>Knows the market · 2022</span></cite></article>
+    <article class="testimonial"><span class="testimonial-stars" aria-label="5 out of 5 stars">★★★★★</span><blockquote>Crystal Kilpatrick is an excellent realtor and always goes the extra mile. I highly recommend her.</blockquote><cite>Kent Black<span>Repeat client · Residential + commercial · 2023</span></cite></article>
+    <article class="testimonial"><span class="testimonial-stars" aria-label="5 out of 5 stars">★★★★★</span><blockquote>Overall best experience we've had buying and selling our homes. Thank you Crystal for all your hard work.</blockquote><cite>Stanley Coan<span>Buy + sell client · 2023</span></cite></article>
+    <article class="testimonial"><span class="testimonial-stars" aria-label="5 out of 5 stars">★★★★★</span><blockquote>Crystal was great to work with and very attentive throughout the entire process.</blockquote><cite>Gerard Juarez<span>Attentive · End-to-end · 2023</span></cite></article>
+    <article class="testimonial"><span class="testimonial-stars" aria-label="5 out of 5 stars">★★★★★</span><blockquote>Detail-oriented when helping customers. Our go-to realtor for friends and family.</blockquote><cite>Buda's Brightside<span>Go-to for friends and family · 2022</span></cite></article>
+    <article class="testimonial"><span class="testimonial-stars" aria-label="5 out of 5 stars">★★★★★</span><blockquote>Need help with real estate? Call Crystal — very knowledgeable and a pleasure to work with.</blockquote><cite>Bill Jones<span>Knowledgeable · 2018</span></cite></article>
+  </div>
+</section>
+
+<!-- ============================ CATEGORIZATION CALLOUTS ============================ -->
+<!-- Counts derived from /data/reviews.json tag classifications. Numbers reflect the 30
+     captured reviews, not Crystal's full client base. Adam can refine wording later. -->
+<section class="container">
+  <div class="reviews-categories" aria-label="What the reviews show">
+    <div class="reviews-category">
+      <strong>9</strong>
+      <span>Repeat clients, multi-transaction families, and referral-based buyers</span>
+    </div>
+    <div class="reviews-category">
+      <strong>3</strong>
+      <span>Relocation and out-of-area buyers (Chicago, San Antonio, out-of-state)</span>
+    </div>
+    <div class="reviews-category">
+      <strong>4</strong>
+      <span>Listings sold quickly — including a 9-day sale and a 35-day buy-side close</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ BOTTOM CTA ============================ -->
+<section class="bottom-cta">
+  <div class="container">
+    <h2>Talk to Crystal about your transaction.</h2>
+    <p>One conversation. No pressure. 26 years in Austin and 1,000+ closings behind every recommendation.</p>
+    <a class="button button-primary js-track-cta" data-event="calendly_click" href="https://calendly.com/crystalkilpatrick" target="_blank" rel="noopener">Schedule 15 Minutes</a>
+  </div>
 </section>
 
 <section class="container">
-  <div class="reviews-page-grid">
-    <article class="testimonial"><span class="testimonial-stars" aria-label="5 out of 5 stars">★★★★★</span><blockquote>Crystal was instrumental when we decided to move from Chicago to Austin in 2010 helping us purchase our dream home. We made the decision to move in 2024 out of state. She connected us with an exceptional agent for that transaction.</blockquote><cite>Laura Comstock<span>Repeat client · Chicago → Austin → out of state</span></cite></article>
-    <article class="testimonial"><span class="testimonial-stars" aria-label="5 out of 5 stars">★★★★★</span><blockquote>Crystal was an absolute dream to work with! As first-time homebuyers, she made everything seamless, educating us every step of the way. Her expertise and dedication truly shined when she navigated us through a competitive bidding war.</blockquote><cite>Ryan Cunningham<span>First-time buyers · Bidding war</span></cite></article>
-    <article class="testimonial"><span class="testimonial-stars" aria-label="5 out of 5 stars">★★★★★</span><blockquote>Crystal and her team did a great job getting my wife and our family our dream house. She was there throughout the process and gave good guidance and support at every step. It seems she had great options for every third-party need we had.</blockquote><cite>Jason Meikle<span>Family home buyer</span></cite></article>
-    <article class="testimonial"><span class="testimonial-stars" aria-label="5 out of 5 stars">★★★★★</span><blockquote>If you want a realtor who is committed to understanding your needs and wants when it comes to buying a home, look no further than the Crystal Kilpatrick Group. Not only did Crystal ensure we found a home that met our needs, she was our advocate and champion through the entire process.</blockquote><cite>Tiffany<span>Stress-free buyer experience</span></cite></article>
-    <article class="testimonial"><span class="testimonial-stars" aria-label="5 out of 5 stars">★★★★★</span><blockquote>Crystal Kilpatrick is awesome. She provided quick, easy explanations each step of the way on the purchase of my new home. With her guidance, I was able to get the property inspected, appraised, financed and closed in 35 days. Her passion for what she does shines through.</blockquote><cite>Margret Carswell<span>Closed in 35 days</span></cite></article>
-    <article class="testimonial"><span class="testimonial-stars" aria-label="5 out of 5 stars">★★★★★</span><blockquote>Crystal Kilpatrick Group was a superior team to help us get our home sold very quickly. Every detail was handled efficiently and professionally from assisting with staging, beautiful photography for the listing as well as guiding us throughout the process.</blockquote><cite>Terri Warnock<span>Listing · Sold quickly</span></cite></article>
-    <article class="testimonial"><span class="testimonial-stars" aria-label="5 out of 5 stars">★★★★★</span><blockquote>From beginning to end, Crystal took care of us. Her knowledge, motivation and tenacity was key in finding us the best home for our family. She understands the market and was able to guide us in a way that made us feel extremely confident about the entire process. We will be looking to Crystal for our future real estate needs.</blockquote><cite>Crystal McQueeney<span>Family home buyer</span></cite></article>
-    <article class="testimonial"><span class="testimonial-stars" aria-label="5 out of 5 stars">★★★★★</span><blockquote>Crystal helped us buy our first house and was great! She is very responsive and positive during the uncertain process of buying your first house. She even recommended we pass on a house that looked like it may have bigger issues to her trained eye.</blockquote><cite>Mark Shepherd<span>First-time buyer</span></cite></article>
-    <article class="testimonial"><span class="testimonial-stars" aria-label="5 out of 5 stars">★★★★★</span><blockquote>We were out-of-town buyers and were referred to Crystal from our previous realtor Kristen Schramme in San Antonio. Being out of town buyers, we couldn't make many trips to Austin, and Crystal always made herself available to our schedule.</blockquote><cite>Mayra Peña<span>Out-of-town buyer · San Antonio referral</span></cite></article>
-    <article class="testimonial"><span class="testimonial-stars" aria-label="5 out of 5 stars">★★★★★</span><blockquote>Crystal and her team have been amazing to work with! They take great care of their clients and their knowledge of the market helps ensure you make an informed choice when buying. Highly recommend.</blockquote><cite>Bryanne Mayo<span>Buyer · Market expertise</span></cite></article>
-    <article class="testimonial"><span class="testimonial-stars" aria-label="5 out of 5 stars">★★★★★</span><blockquote>Crystal is the best!! Super friendly and knowledgeable selling homes. She was able to sell our house in 9 days!!! I have and will continue to recommend her to anyone buying or selling a home!</blockquote><cite>Robert Crumley<span>Sold in 9 days</span></cite></article>
-    <article class="testimonial"><span class="testimonial-stars" aria-label="5 out of 5 stars">★★★★★</span><blockquote>Crystal Kilpatrick Group at Keller Williams Realty not only sold my house but also helped me to buy a new one. She was very responsive, kind, and a constant professional from start to finish. If you sell or buy a house, I recommend you go with the Crystal Kilpatrick Group.</blockquote><cite>Gabriele Brown<span>Buy + sell · Same agent</span></cite></article>
-    <article class="testimonial"><span class="testimonial-stars" aria-label="5 out of 5 stars">★★★★★</span><blockquote>Crystal is a great Realtor and always has her clients' best interest as her primary focus. Crystal is kind and truly cares for all the people she works with. Refreshing to see this kind of focus in business.</blockquote><cite>Julie Kuntz<span>Client-first focus</span></cite></article>
-    <article class="testimonial"><span class="testimonial-stars" aria-label="5 out of 5 stars">★★★★★</span><blockquote>Crystal is amazing. Her personality has to be by far one of the most caring and compassionate I have ever seen. She is always there to listen when you need her and ready to execute when the time is right. You won't be disappointed.</blockquote><cite>Adam M.<span>Caring · Compassionate</span></cite></article>
-    <article class="testimonial"><span class="testimonial-stars" aria-label="5 out of 5 stars">★★★★★</span><blockquote>I highly recommend Crystal. She is very professional, knowledgeable, and responsive. Her expertise was invaluable throughout the home buying process, and I'm thrilled with the end result.</blockquote><cite>Jamie Rose<span>Buyer · Professional + responsive</span></cite></article>
-    <article class="testimonial"><span class="testimonial-stars" aria-label="5 out of 5 stars">★★★★★</span><blockquote>Crystal and her team do an amazing job of finding you the home of your dreams, and your next investment property. Whether a first-time buyer or finding that forever home, the Kilpatrick group find it for you.</blockquote><cite>Josh McDaniel<span>Forever home + investment</span></cite></article>
-    <article class="testimonial"><span class="testimonial-stars" aria-label="5 out of 5 stars">★★★★★</span><blockquote>Crystal and her team are 2nd to none. First class service with the experience and knowledge needed to navigate the complicated Central Texas real estate landscape. Highly recommend!</blockquote><cite>Trey Baumann<span>Central Texas expertise</span></cite></article>
-    <article class="testimonial"><span class="testimonial-stars" aria-label="5 out of 5 stars">★★★★★</span><blockquote>Crystal is the person to call if you ever know of anyone in need of an experienced professional Realtor. She has helped me and so many friends that I know. Thanks Crystal.</blockquote><cite>Bonnie Villacampa<span>Repeat referrer</span></cite></article>
-    <article class="testimonial"><span class="testimonial-stars" aria-label="5 out of 5 stars">★★★★★</span><blockquote>I have had the privilege of working with Crystal on several transactions. She is one of the best that I've had the opportunity to work with.</blockquote><cite>John A. Perez<span>Multiple transactions</span></cite></article>
-    <article class="testimonial"><span class="testimonial-stars" aria-label="5 out of 5 stars">★★★★★</span><blockquote>Crystal is a very sweet and patient lady whom I have worked with, and I recommend you use her as your residential Realtor in the Austin area.</blockquote><cite>Lilly Bullion<span>Austin residential</span></cite></article>
-    <article class="testimonial"><span class="testimonial-stars" aria-label="5 out of 5 stars">★★★★★</span><blockquote>I've worked with Crystal and let me tell you, she is easily the #1 in Austin to work with by far, very friendly and personable and pleasure to work with!</blockquote><cite>Jerry L. Brooks<span>#1 in Austin</span></cite></article>
-    <article class="testimonial"><span class="testimonial-stars" aria-label="5 out of 5 stars">★★★★★</span><blockquote>Crystal Kilpatrick is the realtor you want to represent you if you are the buyer or seller! Can't say enough about her energy and professionalism.</blockquote><cite>Robin Wurzel<span>Buyer or seller representation</span></cite></article>
-    <article class="testimonial"><span class="testimonial-stars" aria-label="5 out of 5 stars">★★★★★</span><blockquote>Crystal was knowledgeable and very friendly, she fought for us with the builder and closing issues and delays. Couldn't have asked for a better realtor and made a new friend in the process!</blockquote><cite>Lori Wilson<span>New construction · Builder advocate</span></cite></article>
-    <article class="testimonial"><span class="testimonial-stars" aria-label="5 out of 5 stars">★★★★★</span><blockquote>Crystal is incredibly professional and personable. Having her on your side for your home will be amazing!</blockquote><cite>Jeff Jones<span>Professional + personable</span></cite></article>
-    <article class="testimonial"><span class="testimonial-stars" aria-label="5 out of 5 stars">★★★★★</span><blockquote>Crystal is amazing. She understands this area and the market. She is wonderful to work with and always looks out for you.</blockquote><cite>Kevin S.<span>Knows the market</span></cite></article>
-    <article class="testimonial"><span class="testimonial-stars" aria-label="5 out of 5 stars">★★★★★</span><blockquote>Crystal Kilpatrick is an excellent realtor and always goes the extra mile. I highly recommend her!</blockquote><cite>Kent Black<span>Repeat client · Residential + commercial</span></cite></article>
-    <article class="testimonial"><span class="testimonial-stars" aria-label="5 out of 5 stars">★★★★★</span><blockquote>Overall best experience we've had buying and selling our homes. Thank you Crystal for all your hard work!</blockquote><cite>Stanley Coan<span>Buy + sell client</span></cite></article>
-    <article class="testimonial"><span class="testimonial-stars" aria-label="5 out of 5 stars">★★★★★</span><blockquote>Crystal was great to work with and very attentive throughout the entire process!</blockquote><cite>Gerard Juarez<span>Attentive · End-to-end</span></cite></article>
-    <article class="testimonial"><span class="testimonial-stars" aria-label="5 out of 5 stars">★★★★★</span><blockquote>Detail oriented when helping customers. Our go to realtor for friends and family!</blockquote><cite>Buda's Brightside<span>Go-to for friends and family</span></cite></article>
-    <article class="testimonial"><span class="testimonial-stars" aria-label="5 out of 5 stars">★★★★★</span><blockquote>Need help with real estate? Call Crystal, very knowledgeable and a pleasure to work with.</blockquote><cite>Bill Jones<span>Knowledgeable</span></cite></article>
-  </div>
-
   <div class="reviews-page-cta">
-    <a class="button button-primary js-track-cta" data-event="contact_click" href="/contact/">Talk to Crystal</a>
-    <a class="button button-secondary js-track-cta" data-event="google_click" href="https://www.google.com/search?q=Crystal+Kilpatrick+Group+Keller+Williams+Realty" target="_blank" rel="noopener">Read All Reviews on Google</a>
+    <a class="button button-secondary js-track-cta" data-event="google_click" href="https://www.google.com/search?q=Crystal+Kilpatrick+Group+Keller+Williams+Realty" target="_blank" rel="noopener">Read All 34 Reviews on Google</a>
+    <a class="button button-secondary js-track-cta" data-event="zillow_click" href="https://www.zillow.com/profile/crystalaustinrealtor" target="_blank" rel="noopener">See Crystal on Zillow</a>
   </div>
 </section>
 
 </main>
 
+<!-- ============================ FOOTER ============================ -->
 <footer class="site-footer" role="contentinfo">
   <div class="container">
     <div class="footer-grid">

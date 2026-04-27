@@ -1,0 +1,281 @@
+{
+  "_about": "Source-of-truth for client reviews. Add new entries here, then mirror into /index.html (marquee) and /testimonials/index.html (grid). All entries are 5-star reviews from Crystal Kilpatrick Group's Google Business Profile.",
+  "source": "Google Business Profile — Crystal Kilpatrick Group · Keller Williams Realty",
+  "rating_summary": {
+    "stars": 5.0,
+    "google_review_count": 34,
+    "captured_here": 30
+  },
+  "reviews": [
+    {
+      "id": "laura-comstock",
+      "name": "Laura Comstock",
+      "tag": "Repeat client · Chicago → Austin → out of state",
+      "date_relative": "2024",
+      "stars": 5,
+      "quote_short": "Crystal was instrumental when we decided to move from Chicago to Austin in 2010 helping us purchase our dream home. When we moved out of state in 2024, she connected us with an exceptional agent for that transaction.",
+      "quote_full": "Crystal was instrumental when we decided to move from Chicago to Austin in 2010 helping us purchase our dream home. We made the decision to move in 2024 out of state. She connected us with an exceptional agent for that transaction."
+    },
+    {
+      "id": "ryan-cunningham",
+      "name": "Ryan Cunningham",
+      "tag": "First-time buyers · Competitive bidding war",
+      "date_relative": "2024",
+      "stars": 5,
+      "quote_short": "As first-time homebuyers, she made everything seamless, educating us every step of the way. Her expertise and dedication truly shined when she navigated us through a competitive bidding war.",
+      "quote_full": "Crystal was an absolute dream to work with! As first-time homebuyers, she made everything seamless, educating us every step of the way. Her expertise and dedication truly shined when she navigated us through a competitive bidding war."
+    },
+    {
+      "id": "jason-meikle",
+      "name": "Jason Meikle",
+      "tag": "Family home buyer",
+      "date_relative": "2023",
+      "stars": 5,
+      "quote_short": "Crystal and her team did a great job getting my wife and our family our dream house. She was there throughout the process and gave good guidance and support at every step.",
+      "quote_full": "Crystal and her team did a great job getting my wife and our family our dream house. She was there throughout the process and gave good guidance and support at every step. It seems she had great options for every third-party need we had."
+    },
+    {
+      "id": "tiffany-buyer",
+      "name": "Tiffany",
+      "tag": "Stress-free buyer experience",
+      "date_relative": "2021",
+      "stars": 5,
+      "quote_short": "If you want a realtor who is committed to understanding your needs and wants when it comes to buying a home, look no further than the Crystal Kilpatrick Group. Crystal was our advocate and champion through the entire process.",
+      "quote_full": "If you want a realtor who is committed to understanding your needs and wants when it comes to buying a home, look no further than the Crystal Kilpatrick Group. Not only did Crystal ensure we found a home that met our needs, she was our advocate and champion through the entire process."
+    },
+    {
+      "id": "margret-carswell",
+      "name": "Margret Carswell",
+      "tag": "Closed in 35 days",
+      "date_relative": "2020",
+      "stars": 5,
+      "quote_short": "Crystal Kilpatrick is awesome. She provided quick, easy explanations each step of the way on the purchase of my new home. With her guidance, I was able to get the property inspected, appraised, financed & closed in 35 days.",
+      "quote_full": "Crystal Kilpatrick is awesome. She provided quick, easy explanations each step of the way on the purchase of my new home. With her guidance, I was able to get the property inspected, appraised, financed & closed in 35 days. Her passion for what she does shines through."
+    },
+    {
+      "id": "terri-warnock",
+      "name": "Terri Warnock",
+      "tag": "Listing · Sold quickly",
+      "date_relative": "2022",
+      "stars": 5,
+      "quote_short": "Crystal Kilpatrick Group was a superior team to help us get our home sold very quickly. Every detail was handled efficiently and professionally — from staging, to beautiful photography, to guiding us through every step.",
+      "quote_full": "Crystal Kilpatrick Group was a superior team to help us get our home sold very quickly. Every detail was handled efficiently and professionally from assisting with staging, beautiful photography for the listing as well as guiding us throughout the process."
+    },
+    {
+      "id": "crystal-mcqueeney",
+      "name": "Crystal McQueeney",
+      "tag": "Family home buyer",
+      "date_relative": "2023",
+      "stars": 5,
+      "quote_short": "From beginning to end, Crystal took care of us. Her knowledge, motivation and tenacity was key in finding us the best home for our family. We will be looking to Crystal for our future real estate needs.",
+      "quote_full": "From beginning to end, Crystal took care of us. Her knowledge, motivation and tenacity was key in finding us the best home for our family. She understands the market and was able to guide us in a way that made us feel extremely confident about the entire process. We will be looking to Crystal for our future real estate needs."
+    },
+    {
+      "id": "mark-shepherd",
+      "name": "Mark Shepherd",
+      "tag": "First-time buyer",
+      "date_relative": "2017",
+      "stars": 5,
+      "quote_short": "Crystal helped us buy our first house and was great. She is very responsive and positive during the uncertain process of buying your first house. She even recommended we pass on a house that looked like it may have bigger issues.",
+      "quote_full": "Crystal helped us buy our first house and was great! She is very responsive and positive during the uncertain process of buying your first house. She even recommended we pass on a house that looked like it may have bigger issues to her trained eye."
+    },
+    {
+      "id": "mayra-pena",
+      "name": "Mayra Peña",
+      "tag": "Out-of-town buyer · San Antonio referral",
+      "date_relative": "2020",
+      "stars": 5,
+      "quote_short": "We were out-of-town buyers. Being out of town, we couldn't make many trips to Austin, and Crystal always made herself available to our schedule.",
+      "quote_full": "We were out-of-town buyers and were referred to Crystal from our previous realtor Kristen Schramme in San Antonio. Being out of town buyers, we couldn't make many trips to Austin, and Crystal always made herself available to our schedule."
+    },
+    {
+      "id": "bryanne-mayo",
+      "name": "Bryanne Mayo",
+      "tag": "Buyer · Market expertise",
+      "date_relative": "2022",
+      "stars": 5,
+      "quote_short": "Crystal and her team have been amazing to work with. They take great care of their clients and their knowledge of the market helps ensure you make an informed choice when buying. Highly recommend.",
+      "quote_full": "Crystal and her team have been amazing to work with! They take great care of their clients and their knowledge of the market helps ensure you make an informed choice when buying. Highly recommend."
+    },
+    {
+      "id": "robert-crumley",
+      "name": "Robert Crumley",
+      "tag": "Sold in 9 days",
+      "date_relative": "2022",
+      "stars": 5,
+      "quote_short": "Crystal is the best. Super friendly and knowledgeable selling homes. She was able to sell our house in 9 days. I have and will continue to recommend her to anyone buying or selling a home.",
+      "quote_full": "Crystal is the best!! Super friendly and knowledgeable is selling homes. She was able to sell our house in 9 days!!! I have and will continue to recommend her to anyone buying or selling a home!"
+    },
+    {
+      "id": "gabriele-brown",
+      "name": "Gabriele Brown",
+      "tag": "Buy + sell · Same agent",
+      "date_relative": "2022",
+      "stars": 5,
+      "quote_short": "Crystal Kilpatrick Group not only sold my house but also helped me to buy a new one. She was very responsive, kind, and a constant professional from start to finish.",
+      "quote_full": "Crystal Kilpatrick Group at Keller Williams Realty not only sold my house but also helped me to buy a new one. She was very responsive, kind, and a constant professional from start to finish. If you sell or buy a house, I recommend you go with the Crystal Kilpatrick Group."
+    },
+    {
+      "id": "julie-kuntz",
+      "name": "Julie Kuntz",
+      "tag": "Client-first focus",
+      "date_relative": "2022",
+      "stars": 5,
+      "quote_short": "Crystal is a great Realtor and always has her clients' best interest as her primary focus. Kind and truly cares for all the people she works with — refreshing to see this kind of focus in business.",
+      "quote_full": "Crystal is a great Realtor and always has her clients best interest as her primary focus. Crystal is kind and truly cares for all the people she works with. Refreshing to see this kind of focus in business."
+    },
+    {
+      "id": "adam-m",
+      "name": "Adam M.",
+      "tag": "Caring · Compassionate",
+      "date_relative": "2020",
+      "stars": 5,
+      "quote_short": "Crystal is amazing. Her personality has to be by far one of the most caring and compassionate I have ever seen. Always there to listen when you need her and ready to execute when the time is right.",
+      "quote_full": "Crystal is amazing. Her personality has to be by far one of the most caring and compassionate I have ever seen. She is always there to listen when you need her and ready to execute when the time is right. You won't be disappointed."
+    },
+    {
+      "id": "jamie-rose",
+      "name": "Jamie Rose",
+      "tag": "Buyer · Professional + responsive",
+      "date_relative": "2023",
+      "stars": 5,
+      "quote_short": "I highly recommend Crystal. She is very professional, knowledgeable, and responsive. Her expertise was invaluable throughout the home buying process, and I'm thrilled with the end result.",
+      "quote_full": "I highly recommend Crystal. She is very professional, knowledgeable, and responsive. Her expertise was invaluable throughout the home buying process, and I'm thrilled with the end result."
+    },
+    {
+      "id": "josh-mcdaniel",
+      "name": "Josh McDaniel",
+      "tag": "Forever home + investment",
+      "date_relative": "2022",
+      "stars": 5,
+      "quote_short": "Crystal and her team do an amazing job of finding you the home of your dreams, and your next investment property. Whether a first-time buyer or finding that forever home, the Kilpatrick group find it for you.",
+      "quote_full": "Crystal and her team do an amazing job of finding you the home of your dreams, and your next investment property. Whether a first time buyer or finding that forever home, the Kilpatrick group find it for you."
+    },
+    {
+      "id": "trey-baumann",
+      "name": "Trey Baumann",
+      "tag": "Central Texas expertise",
+      "date_relative": "2022",
+      "stars": 5,
+      "quote_short": "Crystal and her team are 2nd to none. First-class service with the experience and knowledge needed to navigate the complicated Central Texas real estate landscape. Highly recommend.",
+      "quote_full": "Crystal and her team are 2nd to none. First class service with the experience and knowledge needed to navigate the complicated Central Texas real estate landscape. Highly recommend!"
+    },
+    {
+      "id": "bonnie-villacampa",
+      "name": "Bonnie Villacampa",
+      "tag": "Repeat referrer",
+      "date_relative": "2022",
+      "stars": 5,
+      "quote_short": "Crystal is the person to call if you ever know of anyone in need of an experienced, professional Realtor. She has helped me and so many friends that I know.",
+      "quote_full": "Crystal is the person to call if you ever know of anyone in need of an experienced professional Realtor. She has helped me and so many friends that I know. Thanks Crystal."
+    },
+    {
+      "id": "john-perez",
+      "name": "John A. Perez",
+      "tag": "Multiple transactions",
+      "date_relative": "2024",
+      "stars": 5,
+      "quote_short": "I have had the privilege of working with Crystal on several transactions. She is one of the best that I've had the opportunity to work with.",
+      "quote_full": "I have had the privilege of working with Crystal on several transactions. She is one of the best that I've had the opportunity to work with."
+    },
+    {
+      "id": "lilly-bullion",
+      "name": "Lilly Bullion",
+      "tag": "Austin residential",
+      "date_relative": "2022",
+      "stars": 5,
+      "quote_short": "Crystal is a very sweet and patient lady whom I have worked with, and I recommend you use her as your residential Realtor in the Austin area.",
+      "quote_full": "Crystal is a very sweet and patient lady whom I have worked with, and I recommend you use her as your residential Realtor in the Austin area."
+    },
+    {
+      "id": "jerry-brooks",
+      "name": "Jerry L. Brooks",
+      "tag": "#1 in Austin",
+      "date_relative": "2022",
+      "stars": 5,
+      "quote_short": "I've worked with Crystal and let me tell you, she is easily the #1 in Austin to work with by far — very friendly and personable and a pleasure to work with.",
+      "quote_full": "I've worked with Crystal and let me tell you, she is easily the #1 in Austin to work with by far, very friendly and personable and pleasure to work with!"
+    },
+    {
+      "id": "robin-wurzel",
+      "name": "Robin Wurzel",
+      "tag": "Buyer or seller representation",
+      "date_relative": "2022",
+      "stars": 5,
+      "quote_short": "Crystal Kilpatrick is the realtor you want to represent you whether you're the buyer or seller. Can't say enough about her energy and professionalism.",
+      "quote_full": "Crystal Kilpatrick is the realtor you want to represent you if you are the buyer or seller! Can't say enough about her energy and professionalism."
+    },
+    {
+      "id": "lori-wilson",
+      "name": "Lori Wilson",
+      "tag": "New construction · Builder advocate",
+      "date_relative": "2022",
+      "stars": 5,
+      "quote_short": "Crystal was knowledgeable and very friendly. She fought for us with the builder and closing issues and delays. Couldn't have asked for a better realtor — and made a new friend in the process.",
+      "quote_full": "Crystal was knowledgeable and very friendly, she fought for us with the builder and closing issues and delays, couldn't have asked for a better realtor and made a new friend in the process!"
+    },
+    {
+      "id": "jeff-jones",
+      "name": "Jeff Jones",
+      "tag": "Professional + personable",
+      "date_relative": "2022",
+      "stars": 5,
+      "quote_short": "Crystal is incredibly professional and personable. Having her on your side for your home will be amazing.",
+      "quote_full": "Crystal is incredibly professional and personable. Having her on your side for your home will be amazing!"
+    },
+    {
+      "id": "kevin-s",
+      "name": "Kevin S.",
+      "tag": "Knows the market",
+      "date_relative": "2022",
+      "stars": 5,
+      "quote_short": "Crystal is amazing. She understands this area and the market. She is wonderful to work with and always looks out for you.",
+      "quote_full": "Crystal is amazing. She understands this area and the market. She is wonderful to work with and always looks out for you."
+    },
+    {
+      "id": "kent-black",
+      "name": "Kent Black",
+      "tag": "Repeat client · Residential + commercial",
+      "date_relative": "2023",
+      "stars": 5,
+      "quote_short": "Crystal Kilpatrick is an excellent realtor and always goes the extra mile. I highly recommend her.",
+      "quote_full": "Crystal Kilpatrick is an excellent realtor and always goes the extra mile. I highly recommend her!"
+    },
+    {
+      "id": "stanley-coan",
+      "name": "Stanley Coan",
+      "tag": "Buy + sell client",
+      "date_relative": "2023",
+      "stars": 5,
+      "quote_short": "Overall best experience we've had buying and selling our homes. Thank you Crystal for all your hard work.",
+      "quote_full": "Overall best experience we've had buying and selling our homes. Thank you Crystal for all your hard work!"
+    },
+    {
+      "id": "gerard-juarez",
+      "name": "Gerard Juarez",
+      "tag": "Attentive · End-to-end",
+      "date_relative": "2023",
+      "stars": 5,
+      "quote_short": "Crystal was great to work with and very attentive throughout the entire process.",
+      "quote_full": "Crystal was great to work with and very attentive throughout the entire process!"
+    },
+    {
+      "id": "budas-brightside",
+      "name": "Buda's Brightside",
+      "tag": "Go-to for friends and family",
+      "date_relative": "2022",
+      "stars": 5,
+      "quote_short": "Detail-oriented when helping customers. Our go-to realtor for friends and family.",
+      "quote_full": "Detail oriented when helping customers. Our go to realtor for friends and family!"
+    },
+    {
+      "id": "bill-jones",
+      "name": "Bill Jones",
+      "tag": "Knowledgeable",
+      "date_relative": "2018",
+      "stars": 5,
+      "quote_short": "Need help with real estate? Call Crystal — very knowledgeable and a pleasure to work with.",
+      "quote_full": "Need help with real estate? Call Crystal, very knowledgeable and a pleasure to work with."
+    }
+  ]
+}
