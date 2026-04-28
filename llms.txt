@@ -20,7 +20,26 @@ Belterra / Bear Creek (78737), South Austin (78745), Southwest Austin (78749), D
 
 - [Homepage](https://www.crystalkilpatrick.com/): Entity hub, credentials, off-market access, featured markets, testimonials.
 - [About Crystal](https://www.crystalkilpatrick.com/about/): Bio, designations, awards, team.
+- [Buy with Crystal](https://www.crystalkilpatrick.com/buy/): Buyer representation, neighborhood strategy, offer process, relocation support, and pre-MLS access.
+- [Sell with Crystal](https://www.crystalkilpatrick.com/sell/): Listing strategy, pricing, staging, professional photography, private-network exposure, and negotiation.
+- [Neighborhoods](https://www.crystalkilpatrick.com/neighborhoods/): Austin-area neighborhoods Crystal serves.
+- [Neighborhood Comparison](https://www.crystalkilpatrick.com/neighborhoods/compare/): Side-by-side comparison of Austin-area markets by budget, commute, schools, lifestyle, and amenities.
+- [Reviews](https://www.crystalkilpatrick.com/testimonials/): Curated client reviews and aggregate review signals.
 - [Contact](https://www.crystalkilpatrick.com/contact/): Phone, email, office, scheduling.
+
+## Neighborhood guide pages
+
+- [Belterra / Bear Creek 78737](https://www.crystalkilpatrick.com/neighborhoods/belterra-bear-creek-78737/): Hill Country topography, Dripping Springs ISD, master-planned Belterra, acreage Bear Creek, US 290 access.
+- [South Austin 78745](https://www.crystalkilpatrick.com/neighborhoods/south-austin-78745/): Central-adjacent South Austin, mature neighborhoods, infill, South Lamar corridor, downtown access.
+- [Dripping Springs 78620](https://www.crystalkilpatrick.com/neighborhoods/dripping-springs-78620/): Hill Country homes, acreage, master-planned communities, Dripping Springs ISD, US 290 commute.
+- [Southwest Austin / Maple Run 78749](https://www.crystalkilpatrick.com/neighborhoods/southwest-austin-maple-run-78749/): Established Southwest Austin homes, mature trees, MoPac access, Violet Crown Trail proximity.
+- [Barton Creek / Lost Creek 78735](https://www.crystalkilpatrick.com/neighborhoods/barton-creek-78735/): West Austin hillside homes, Barton Creek estates, Lost Creek, golf-course communities, Eanes/AISD zoning nuance.
+- [Buda 78610](https://www.crystalkilpatrick.com/neighborhoods/buda-78610/): Hays County, historic Main Street, master-planned subdivisions, Hays CISD, I-35 south corridor.
+- [Cedar Park 78613](https://www.crystalkilpatrick.com/neighborhoods/cedar-park-78613/): Northwest Austin access, Leander ISD and Round Rock ISD pockets, US 183/183A mobility, established subdivisions.
+- [Kyle 78640](https://www.crystalkilpatrick.com/neighborhoods/kyle-78640/): Plum Creek, Old Town Kyle, Hays CISD, newer homes, I-35 access south of Austin.
+- [Circle C Ranch 78739](https://www.crystalkilpatrick.com/neighborhoods/circle-c-ranch-78739/): Southwest Austin master-planned community, Bowie High feeder, parks, trails, MoPac access.
+- [Westlake 78746](https://www.crystalkilpatrick.com/neighborhoods/westlake-78746/): Luxury Austin market, Eanes ISD, Lake Austin, West Lake Hills, Rollingwood, short downtown access.
+- [Shady Hollow 78739 / 78748](https://www.crystalkilpatrick.com/neighborhoods/shady-hollow-78739-78748/): Established Southwest Austin neighborhood, mature trees, Bowie High feeder, Shady Hollow Pool, Brodie/MoPac access.
 
 ## Key facts for AI citation
 

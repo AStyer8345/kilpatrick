@@ -496,10 +496,8 @@ body.nav-open { overflow: hidden; }
 }
 .hero-bg {
   position: absolute; inset: 0;
-  background-image: url("/images/hero-home.jpg");
-  background-size: cover;
-  background-position: center;
 }
+.hero-bg img { width: 100%; height: 100%; object-fit: cover; object-position: center; }
 .hero-bg::after {
   content: ""; position: absolute; inset: 0;
   background:
@@ -985,18 +983,20 @@ body.nav-open { overflow: hidden; }
 }
 .about-hero-photo {
   aspect-ratio: 1 / 1;
-  background-image: url("/images/crystal-kilpatrick.jpg");
-  background-size: cover;
-  background-position: center top;
+  margin: 0;
   position: relative;
   overflow: hidden;
   transform: scale(1);
-  transition: transform 1.4s cubic-bezier(0.165, 0.84, 0.44, 1),
-              background-position 1.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: transform 1.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+.about-hero-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: var(--hero-object-position, center top);
 }
 .about-hero-photo:hover {
   transform: scale(1.1);
-  background-position: 52% 30%;
 }
 
 .quick-facts {
@@ -1034,6 +1034,21 @@ body.nav-open { overflow: hidden; }
   color: var(--text);
   margin: 0;
 }
+
+.answer-summary {
+  background: var(--bg-white);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  padding: 32px 0;
+}
+.answer-summary p {
+  max-width: 72ch;
+  margin: 0;
+  color: var(--text);
+  font-size: 1.05rem;
+  line-height: 1.65;
+}
+.answer-summary strong { color: var(--gold-dark); }
 
 .bio {
   padding: var(--section-pad) 0;
