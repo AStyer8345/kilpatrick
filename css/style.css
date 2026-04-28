@@ -542,6 +542,8 @@ body.nav-open { overflow: hidden; }
   gap: 14px;
   margin-top: 8px;
 }
+.hero-actions .button + .button { margin-left: 0; }
+.about-hero-actions { margin-top: 26px; }
 
 /* =================================================================
    CREDIBILITY BAR
@@ -712,24 +714,61 @@ body.nav-open { overflow: hidden; }
 .markets-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 24px;
+  gap: 18px;
 }
 .market {
   display: block;
-  padding: 28px 4px 24px;
+  position: relative;
+  min-height: 154px;
+  padding: 24px 22px 22px;
+  background:
+    linear-gradient(180deg, rgba(255,255,255,0.72) 0%, rgba(255,255,255,0.3) 100%),
+    var(--bg);
   border-top: 1px solid var(--border);
+  border-left: 1px solid var(--border);
   animation: fade-in-up 0.8s ease-out both;
-  transition: border-top-color 0.2s ease, transform 0.25s ease;
+  overflow: hidden;
+  transition: border-color 0.2s ease, box-shadow 0.25s ease, transform 0.25s ease, background 0.25s ease;
+}
+.market::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--gold);
+  transition: width 0.28s ease;
+}
+.market::after {
+  content: "→";
+  position: absolute;
+  right: 22px;
+  bottom: 20px;
+  color: var(--gold);
+  font-size: 1rem;
+  opacity: 0;
+  transform: translateX(-6px);
+  transition: opacity 0.2s ease, transform 0.25s ease;
 }
 .market:nth-child(1) { animation-delay: 0.05s; }
 .market:nth-child(2) { animation-delay: 0.15s; }
 .market:nth-child(3) { animation-delay: 0.25s; }
 .market:nth-child(4) { animation-delay: 0.35s; }
 .market:hover {
-  border-top-color: var(--gold);
-  transform: translateY(-3px);
+  background: var(--bg-white);
+  border-color: rgba(181, 151, 90, 0.45);
+  box-shadow: 0 18px 40px rgba(31, 26, 20, 0.07);
+  transform: translateY(-4px);
 }
+.market:hover::before { width: 100%; }
+.market:hover::after { opacity: 1; transform: translateX(0); }
 .market:hover .market-name { color: var(--gold); }
+.market-body {
+  position: relative;
+  z-index: 1;
+  padding-bottom: 20px;
+}
 .market-name {
   font-family: var(--font-display);
   font-size: clamp(1.35rem, 1.8vw, 1.65rem);
@@ -1665,3 +1704,69 @@ body.nav-open { overflow: hidden; }
   color: var(--text-secondary);
 }
 .faq-answer p:last-child { margin-bottom: 0; }
+
+/* =================================================================
+   SUBTLE SCROLL EFFECTS
+   Restrained, trust-focused motion added as progressive enhancement.
+   ================================================================= */
+.reveal {
+  opacity: 0;
+  transform: translateY(25px);
+  transition:
+    opacity 0.7s ease var(--reveal-delay, 0s),
+    transform 0.7s ease var(--reveal-delay, 0s);
+  will-change: opacity, transform;
+}
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.site-nav.scrolled {
+  background: rgba(28, 28, 28, 0.92);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  border-bottom-color: rgba(250, 248, 245, 0.16);
+  box-shadow: 0 1px 0 rgba(28, 28, 28, 0.08);
+  transition: background 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+}
+.site-nav.scrolled .brand,
+.site-nav.scrolled .nav-links a,
+.site-nav.scrolled .nav-phone,
+.site-nav.scrolled .nav-toggle {
+  color: var(--bg);
+}
+.site-nav.scrolled .brand-sub,
+.site-nav.scrolled .nav-sep {
+  color: rgba(250, 248, 245, 0.64);
+}
+.site-nav.scrolled .nav-social a {
+  color: rgba(250, 248, 245, 0.78);
+}
+
+.testimonial {
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+.testimonial:hover {
+  transform: none;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+}
+@media (hover: hover) and (pointer: fine) {
+  .testimonial:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 24px 48px rgba(0, 0, 0, 0.10);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal,
+  .reveal.active {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+  .testimonial,
+  .testimonial:hover {
+    transform: none !important;
+  }
+}
