@@ -503,8 +503,8 @@ body.nav-open { overflow: hidden; }
 .hero-bg::after {
   content: ""; position: absolute; inset: 0;
   background:
-    linear-gradient(100deg, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.35) 35%, rgba(0,0,0,0) 65%),
-    linear-gradient(180deg, rgba(0,0,0,0) 50%, rgba(0,0,0,0.45) 100%);
+    linear-gradient(100deg, rgba(0,0,0,0.72) 0%, rgba(0,0,0,0.52) 42%, rgba(0,0,0,0.12) 72%),
+    linear-gradient(180deg, rgba(0,0,0,0.18) 0%, rgba(0,0,0,0.56) 100%);
 }
 .hero .container { position: relative; z-index: 2; }
 .hero h1,
@@ -525,17 +525,16 @@ body.nav-open { overflow: hidden; }
   color: #FFFFFF;
   max-width: 16ch;
   margin-bottom: 28px;
-  animation: fade-in-up 0.9s ease-out 0.1s both;
 }
 .hero p.lead {
   color: rgba(255, 255, 255, 0.86);
   max-width: 56ch;
   font-size: 1.25rem;
-  animation: fade-in-up 0.9s ease-out 0.3s both;
 }
 .hero-supporting {
   color: rgba(255, 255, 255, 0.72);
-  font-size: 1rem;
+  font-size: 1.05rem;
+  letter-spacing: 0.04em;
   max-width: 60ch;
   margin: 16px 0 36px;
 }
@@ -976,6 +975,7 @@ body.nav-open { overflow: hidden; }
   align-items: center;
 }
 .about-hero-text h1 { margin-bottom: 16px; }
+.about-hero-text .lead { max-width: 56ch; }
 .about-hero-subtitle {
   font-size: 1rem;
   letter-spacing: 0.04em;
@@ -1430,6 +1430,7 @@ body.nav-open { overflow: hidden; }
 
   .hero { min-height: 78vh; padding: calc(var(--nav-height) + 60px) 0 64px; }
   .hero h1 { font-size: 2.6rem; }
+  .hero p.lead { font-size: 1.12rem; }
 
   .credibility-grid { grid-template-columns: repeat(2, 1fr); }
   .credibility-item { border-right: 1px solid var(--border); border-bottom: 1px solid var(--border); }
@@ -1448,8 +1449,11 @@ body.nav-open { overflow: hidden; }
 
   .authority-row { gap: 24px 32px; }
 
-  .about-hero-grid { grid-template-columns: 1fr; gap: 40px; }
-  .about-hero-photo { max-width: 320px; }
+  .about-hero { padding: calc(var(--nav-height) + 48px) 0 var(--section-pad-mobile); }
+  .about-hero-grid { grid-template-columns: 1fr; gap: 28px; }
+  .about-hero-photo { width: 100%; max-width: none; aspect-ratio: 4 / 3; }
+  .about-hero-text h1 { font-size: clamp(2.25rem, 10vw, 3.25rem); }
+  .about-hero-subtitle { margin-bottom: 18px; }
 
   .facts-grid { grid-template-columns: 1fr; }
   .fact { grid-template-columns: 1fr; gap: 4px; }
@@ -1474,6 +1478,8 @@ body.nav-open { overflow: hidden; }
 
 @media (max-width: 520px) {
   .hero h1 { font-size: 2.1rem; }
+  .hero { min-height: 72vh; }
+  .hero-supporting { margin-bottom: 24px; }
   .button { padding: 14px 26px; font-size: 12px; }
   .button + .button { margin-left: 0; }
   .hero-actions { flex-direction: column; align-items: stretch; }
@@ -1551,7 +1557,7 @@ body.nav-open { overflow: hidden; }
   background: linear-gradient(180deg, rgba(0,0,0,0) 60%, rgba(0,0,0,0.25) 100%);
   pointer-events: none;
 }
-.guide-card-photo--belterra { background-image: url("/images/markets/belterra-78737.jpg"); }
+.guide-card-photo--belterra { background-image: url("/images/markets-research/belterra-bear-creek-78737/01-bear-creek-river-austin-texas.webp"); }
 .guide-card-photo--south-austin { background-image: url("/images/markets/south-austin-78745.jpg"); }
 .guide-card-photo--barton-creek { background-image: url("/images/markets/barton-creek-78735.jpg"); }
 .guide-card-photo--new-braunfels { background-image: url("/images/markets/new-braunfels.jpg"); }
@@ -1560,6 +1566,9 @@ body.nav-open { overflow: hidden; }
 .guide-card-photo--dripping-springs { background-image: url("/images/markets/dripping-springs-78620.jpg"); }
 .guide-card-photo--kyle { background-image: url("/images/markets/kyle-78640.jpg"); }
 .guide-card-photo--maple-run { background-image: url("/images/markets/southwest-austin-maple-run-78749.jpg"); background-position: center 35%; }
+.guide-card-photo--circle-c { background-image: url("/images/markets/southwest-austin-maple-run-78749.jpg"); background-position: center 35%; }
+.guide-card-photo--westlake { background-image: url("/images/aerial-luxury-home.png"); }
+.guide-card-photo--shady-hollow { background-image: url("/images/markets/southwest-austin-maple-run-78749.jpg"); background-position: center 35%; }
 .guide-card:hover .guide-card-photo { transform: scale(1.04); transition: transform 1s cubic-bezier(0.165, 0.84, 0.44, 1); }
 .guide-card-body { padding: 28px 32px 32px; }
 .guide-card-zip {
