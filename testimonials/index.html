@@ -52,19 +52,24 @@
   .reviews-featured {
     border-top: 1px solid var(--border);
     border-bottom: 1px solid var(--border);
-    padding: 72px 0;
+    padding: 72px 32px;
     margin: 24px 0 16px;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
   .reviews-featured blockquote {
     font-family: 'Playfair Display', Georgia, serif;
     font-weight: 400;
-    font-size: clamp(24px, 3.6vw, 38px);
+    font-size: clamp(24px, 3.2vw, 36px);
     line-height: 1.35;
     color: var(--text);
-    max-width: 28ch;
+    max-width: 24ch;
+    width: 100%;
     margin: 0 auto 28px;
     quotes: "\201C" "\201D";
+    text-align: center;
   }
   .reviews-featured blockquote::before { content: open-quote; margin-right: 4px; }
   .reviews-featured blockquote::after  { content: close-quote; margin-left: 4px; }
@@ -335,11 +340,10 @@
 </section>
 
 <!-- ============================ FEATURED PULL QUOTE ============================ -->
-<!-- Featured quote: Margret Carswell — picked for the most concrete, verifiable outcome
-     (35-day close start to finish). Aligns with voice-guide.md §4: "Numbers, not adjectives." -->
+<!-- Featured quote: Tiffany — picked for trust, fit, and advocacy rather than speed alone. -->
 <section class="container reviews-featured" aria-label="Featured client review">
-  <blockquote>I was able to get the property inspected, appraised, financed and closed in 35 days.</blockquote>
-  <cite>Margret Carswell<span>Buyer · Closed in 35 days · Google review</span></cite>
+  <blockquote>Crystal was our advocate and champion through the entire process.</blockquote>
+  <cite>Tiffany<span>Buyer · Stress-free experience · Google review</span></cite>
 </section>
 
 <!-- ============================ REVIEWS GRID ============================ -->
