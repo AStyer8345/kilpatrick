@@ -1100,6 +1100,8 @@ body.nav-open { overflow: hidden; }
 .bio-grid h2 { margin: 0; }
 .bio-body p { font-size: 1.075rem; color: var(--text); }
 .bio-body p:not(:last-child) { margin-bottom: 1.4em; }
+.bio-photo { margin: 2em 0; }
+.bio-photo img { display: block; width: 100%; height: auto; }
 
 .designations {
   background: var(--bg);
@@ -1460,15 +1462,10 @@ body.nav-open { overflow: hidden; }
   color: rgba(250, 248, 245, 0.78);
 }
 .eho-icon {
-  width: 36px; height: 36px;
-  border: 1px solid rgba(250, 248, 245, 0.55);
-  display: flex; align-items: center; justify-content: center;
-  font-size: 9px;
-  letter-spacing: 0.04em;
-  text-align: center;
-  line-height: 1.05;
+  width: 36px;
+  height: 36px;
   flex-shrink: 0;
-  /* ASSET NEEDED: Equal Housing Opportunity logo SVG */
+  display: block;
 }
 
 /* =================================================================
