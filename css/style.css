@@ -1349,18 +1349,6 @@ body.nav-open { overflow: hidden; }
   height: 420px;
   border: 0;
 }
-.contact-map-placeholder {
-  height: 420px;
-  background: linear-gradient(135deg, #D8CFC2 0%, #B5A88E 100%);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--text);
-  font-size: 13px;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-  /* ASSET NEEDED: Google Maps embed for 1801 S MoPac Expy #100 Austin TX 78746 */
-}
 
 /* =================================================================
    STUB PAGE
