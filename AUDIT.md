@@ -23,6 +23,7 @@
 | 5 | **Contact form — host mismatch** | `redirect` pointed at non-www `crystalkilpatrick.com`; site canonicalizes to **www**. Aligned to `https://www.crystalkilpatrick.com/contact/?sent=1` to avoid an extra redirect hop. |
 | 6 | **Performance** | Lazy-loaded 9 below-the-fold heavy images on `sell/` (6 staging PNGs + aerial + interior + sold-steiner) — **~3.3 MB deferred** off initial render. |
 | 7 | **Cleanup** | Removed stale `<!-- ASSET NEEDED: EHO logo -->` comment (logo is wired). |
+| 8 | **Performance — webp** | Re-encoded the 8 photo PNGs (aerial + 6 staging + sold-steiner-ranch) to webp q82: **3.6 MB → 403 KB (89% smaller)**. Rewired all 9 references (sell, westlake hero, guide-card CSS background); removed the orphaned PNGs. Verified live on production (`.webp` 200, old `.png` 404). |
 
 _(Prior session, already live: real EHO logo, About lifestyle photo, Google Maps iframe, Web3Forms key, all 98 Calendly CTAs rerouted to the contact form.)_
 
@@ -52,14 +53,13 @@ _(Prior session, already live: real EHO logo, About lifestyle photo, Google Maps
 
 ## 📋 Backlog (post-launch, prioritized)
 
-1. **PNG→webp re-encoding — biggest perf win (~3 MB).** These are photos saved as lossless PNG: `aerial-luxury-home.png` (736 KB at only 820×460), 6 staging PNGs (`staging-*` ~2.5 MB total), `sold-steiner-ranch.png`. Re-encode to webp/jpg → ~85–90% smaller. Needs binary + markup (`<picture>`) changes. _I can do this on request._
-2. **Compress oversized JPGs** to q70: market heroes (`buda` 626 KB, `cedar-park`/`southwest-austin` 500–686 KB), `crystal-bio-blue.jpg` (586 KB), `crystal-kitchen.jpg` (500 KB).
-3. **Reused/low-res hero images:** `westlake` uses the small 820×460 aerial PNG as its hero (will look soft on a wide banner); `circle-c-ranch` and `shady-hollow` both reuse the `maple-run` photo.
-4. **Neighborhood-specific OG images** (currently all use the default `og-image.jpg`).
-5. **`apple-touch-icon.png`** (180×180) for iOS home-screen bookmarks.
-6. **About page** — Crystal's personal "why I do this" paragraph (content gap, noted in HTML comment).
-7. **`/sell/home-value/`** dedicated lead-capture form (CTAs currently route to `/contact/`).
-8. **AggregateRating monitor** — testimonials declares `reviewCount=34` (matches the visible "34 Google reviews" line and her real GBP total — truthful and internally consistent). Keep it synced with her live GBP count; note Google sometimes discounts self-referential aggregate ratings.
+1. **Compress oversized JPGs** to q70: market heroes (`buda` 626 KB, `cedar-park`/`southwest-austin` 500–686 KB), `crystal-bio-blue.jpg` (586 KB), `crystal-kitchen.jpg` (500 KB). _(The PNG→webp re-encode — formerly the #1 item here — shipped this session; see Fixed #8.)_
+2. **Reused/low-res hero images:** `westlake` uses the small 820×460 aerial image as its hero (will look soft on a wide banner); `circle-c-ranch` and `shady-hollow` both reuse the `maple-run` photo.
+3. **Neighborhood-specific OG images** (currently all use the default `og-image.jpg`).
+4. **`apple-touch-icon.png`** (180×180) for iOS home-screen bookmarks.
+5. **About page** — Crystal's personal "why I do this" paragraph (content gap, noted in HTML comment).
+6. **`/sell/home-value/`** dedicated lead-capture form (CTAs currently route to `/contact/`).
+7. **AggregateRating monitor** — testimonials declares `reviewCount=34` (matches the visible "34 Google reviews" line and her real GBP total — truthful and internally consistent). Keep it synced with her live GBP count; note Google sometimes discounts self-referential aggregate ratings.
 
 ---
 
