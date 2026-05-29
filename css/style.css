@@ -1251,15 +1251,6 @@ body.nav-open { overflow: hidden; }
 }
 .contact-method dd a { color: inherit; }
 .contact-method dd a:hover { color: var(--gold); }
-.contact-calendly {
-  margin-top: 40px;
-  padding: 32px;
-  background: var(--bg-white);
-  border: 1px solid var(--border);
-}
-.contact-calendly h3 { margin-bottom: 12px; }
-.contact-calendly p { margin-bottom: 24px; }
-
 /* Form */
 .contact-form h2 { margin-bottom: 36px; }
 .form-row { margin-bottom: 24px; }
