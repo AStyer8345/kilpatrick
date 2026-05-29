@@ -11,6 +11,12 @@
 <meta property="og:title" content="Contact Crystal Kilpatrick — Austin Realtor">
 <meta property="og:description" content="Talk to Crystal. 512-680-5835 · crystal@crystalkilpatrick.com">
 <meta property="og:url" content="https://www.crystalkilpatrick.com/contact/">
+<meta name="twitter:card" content="summary_large_image">
+<meta property="og:image" content="https://www.crystalkilpatrick.com/images/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Crystal Kilpatrick Group — Austin real estate since 2000">
+<meta name="twitter:image" content="https://www.crystalkilpatrick.com/images/og-image.jpg">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -154,13 +160,17 @@
       Submissions go there with styer.adam@gmail.com on CC.
       Public key — safe to commit. Rotate at web3forms.com if abused.
     -->
-    <form class="contact-form" action="https://api.web3forms.com/submit" method="POST">
+    <div id="contactSuccess" class="form-success" role="status" aria-live="polite" hidden>
+      <h2>Thanks — your message is on its way.</h2>
+      <p>Crystal will reach out personally, usually within one business day. For anything urgent, call <a href="tel:+15126805835">512-680-5835</a>.</p>
+    </div>
+    <form name="contact" class="contact-form" action="https://api.web3forms.com/submit" method="POST">
       <h2>Send a note.</h2>
       <input type="hidden" name="access_key" value="98d0fab5-2e1c-4658-b5ac-85259bf902cb">
       <input type="hidden" name="subject" value="New contact form submission — crystalkilpatrick.com">
       <input type="hidden" name="from_name" value="Crystal Kilpatrick Group Website">
       <input type="hidden" name="cc" value="styer.adam@gmail.com">
-      <input type="hidden" name="redirect" value="https://crystalkilpatrick.com/contact/?sent=1">
+      <input type="hidden" name="redirect" value="https://www.crystalkilpatrick.com/contact/?sent=1">
       <p class="form-honeypot" aria-hidden="true"><label>Don't fill this out: <input type="checkbox" name="botcheck"></label></p>
 
       <div class="form-row">
@@ -265,6 +275,7 @@
         <div class="footer-disclosures">
           <a href="https://www.trec.texas.gov/sites/default/files/pdf-forms/IABS%201-0_1.pdf" target="_blank" rel="noopener">Information About Brokerage Services</a>
           <a href="https://www.trec.texas.gov/sites/default/files/pdf-forms/CN%201-2.pdf" target="_blank" rel="noopener">Texas Consumer Protection Notice</a>
+          <a href="/credits/">Photo Credits</a>
         </div>
         <div class="footer-eho">
           <img src="/images/eho-logo.svg" class="eho-icon" alt="Equal Housing Opportunity logo" width="36" height="36">

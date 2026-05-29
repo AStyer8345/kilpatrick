@@ -58,7 +58,7 @@
     }
   });
 
-  /* --- contact form: lightweight UX state (no backend assumed) --- */
+  /* --- contact form: consent guard + post-submit success state --- */
   var form = document.querySelector('form[name="contact"]');
   if (form) {
     form.addEventListener('submit', function (e) {
@@ -70,5 +70,19 @@
         if (msg) msg.textContent = 'Please review and accept the contact consent before sending.';
       }
     });
+  }
+
+  /* Web3Forms redirects back with ?sent=1 — reveal the confirmation. */
+  var success = document.getElementById('contactSuccess');
+  if (success && /[?&]sent=1\b/.test(window.location.search)) {
+    success.hidden = false;
+    if (form) form.hidden = true;
+    success.setAttribute('tabindex', '-1');
+    success.focus();
+    success.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    /* Drop the query so a refresh doesn't re-show the banner. */
+    if (window.history && window.history.replaceState) {
+      window.history.replaceState({}, document.title, window.location.pathname);
+    }
   }
 })();

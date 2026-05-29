@@ -1253,6 +1253,14 @@ body.nav-open { overflow: hidden; }
 .contact-method dd a:hover { color: var(--gold); }
 /* Form */
 .contact-form h2 { margin-bottom: 36px; }
+.form-success {
+  background: var(--bg-white);
+  border: 1px solid var(--gold);
+  border-left: 3px solid var(--gold);
+  padding: 32px;
+}
+.form-success h2 { margin: 0 0 12px; }
+.form-success p { margin: 0; color: var(--text-secondary); }
 .form-row { margin-bottom: 24px; }
 .form-row label {
   display: block;
