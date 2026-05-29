@@ -1605,7 +1605,7 @@ body.nav-open { overflow: hidden; }
 .guide-card-photo--kyle { background-image: url("/images/markets/kyle-78640.jpg"); }
 .guide-card-photo--maple-run { background-image: url("/images/markets/southwest-austin-maple-run-78749.jpg"); background-position: center 35%; }
 .guide-card-photo--circle-c { background-image: url("/images/markets/southwest-austin-maple-run-78749.jpg"); background-position: center 35%; }
-.guide-card-photo--westlake { background-image: url("/images/aerial-luxury-home.png"); }
+.guide-card-photo--westlake { background-image: url("/images/aerial-luxury-home.webp"); }
 .guide-card-photo--shady-hollow { background-image: url("/images/markets/southwest-austin-maple-run-78749.jpg"); background-position: center 35%; }
 .guide-card:hover .guide-card-photo { transform: scale(1.04); transition: transform 1s cubic-bezier(0.165, 0.84, 0.44, 1); }
 .guide-card-body { padding: 28px 32px 32px; }
