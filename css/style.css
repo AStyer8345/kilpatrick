@@ -546,6 +546,37 @@ body.nav-open { overflow: hidden; }
 .about-hero-actions { margin-top: 26px; }
 
 /* =================================================================
+   DESIGNATIONS BAND (homepage, under hero)
+   ================================================================= */
+.designations-band {
+  background: var(--bg-white);
+  border-top: 1px solid var(--border);
+  padding: 48px 0 44px;
+  text-align: center;
+}
+.designations-band .eyebrow { margin-bottom: 14px; }
+.designations-band-letters {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 5vw, 3.25rem);
+  letter-spacing: 0.04em;
+  color: var(--gold);
+  margin: 0 0 14px;
+  line-height: 1.1;
+}
+.designations-band-key {
+  font-size: 13px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  margin: 0 auto;
+  max-width: 880px;
+}
+@media (max-width: 720px) {
+  .designations-band { padding: 36px 0 32px; }
+  .designations-band-key { font-size: 11px; letter-spacing: 0.06em; }
+}
+
+/* =================================================================
    CREDIBILITY BAR
    ================================================================= */
 .credibility {
