@@ -156,9 +156,12 @@
 
     <!-- form -->
     <!--
-      Web3Forms access key registered to crystalaustinrealtor@gmail.com.
-      Submissions go there with styer.adam@gmail.com on CC.
-      Public key — safe to commit. Rotate at web3forms.com if abused.
+      Primary path (JS): main.js posts to the n8n webhook
+      https://styer.app.n8n.cloud/webhook/crystal-contact-form
+      (workflow kfE5Kg9PXfSx0Qwl) — emails crystalaustinrealtor@gmail.com,
+      CC adam.styer@hypersmart.loan, reply-to set to the lead.
+      Fallback path (no JS): native POST to Web3Forms; access key registered
+      to crystalaustinrealtor@gmail.com, no CC. Public key — safe to commit.
     -->
     <div id="contactSuccess" class="form-success" role="status" aria-live="polite" hidden>
       <h2>Thanks — your message is on its way.</h2>
@@ -169,7 +172,6 @@
       <input type="hidden" name="access_key" value="98d0fab5-2e1c-4658-b5ac-85259bf902cb">
       <input type="hidden" name="subject" value="New contact form submission — crystalkilpatrick.com">
       <input type="hidden" name="from_name" value="Crystal Kilpatrick Group Website">
-      <input type="hidden" name="cc" value="styer.adam@gmail.com">
       <input type="hidden" name="redirect" value="https://www.crystalkilpatrick.com/contact/?sent=1">
       <p class="form-honeypot" aria-hidden="true"><label>Don't fill this out: <input type="checkbox" name="botcheck"></label></p>
 

@@ -58,17 +58,45 @@
     }
   });
 
-  /* --- contact form: consent guard + post-submit success state --- */
+  /* --- contact form: consent guard + submit to n8n webhook --- */
+  /* Primary path posts JSON to n8n (emails Crystal, CC Adam). Browsers
+     without fetch fall through to the form's native Web3Forms action. */
   var form = document.querySelector('form[name="contact"]');
   if (form) {
     form.addEventListener('submit', function (e) {
+      var msg = form.querySelector('.form-error');
       var consent = form.querySelector('input[name="consent"]');
       if (consent && !consent.checked) {
         e.preventDefault();
         consent.focus();
-        var msg = form.querySelector('.form-error');
         if (msg) msg.textContent = 'Please review and accept the contact consent before sending.';
+        return;
       }
+      if (!window.fetch || !window.FormData) return;
+      e.preventDefault();
+      var button = form.querySelector('button[type="submit"]');
+      var data = {};
+      new FormData(form).forEach(function (value, key) { data[key] = value; });
+      if (msg) msg.textContent = '';
+      if (button) { button.disabled = true; button.textContent = 'Sending…'; }
+      fetch('https://styer.app.n8n.cloud/webhook/crystal-contact-form', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data)
+      }).then(function (res) {
+        if (!res.ok) throw new Error('HTTP ' + res.status);
+        var success = document.getElementById('contactSuccess');
+        if (success) {
+          form.hidden = true;
+          success.hidden = false;
+          success.setAttribute('tabindex', '-1');
+          success.focus();
+          success.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+      }).catch(function () {
+        if (button) { button.disabled = false; button.textContent = 'Send Message'; }
+        if (msg) msg.textContent = 'Something went wrong sending your message. Please call 512-680-5835 or email crystal@crystalkilpatrick.com directly.';
+      });
     });
   }
 
