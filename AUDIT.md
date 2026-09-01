@@ -74,3 +74,19 @@ _(Prior session, already live: real EHO logo, About lifestyle photo, Google Maps
 ## Verdict
 
 **GO.** The site is technically launch-ready: no broken links, valid structured data, consistent NAP, clean mobile, solid accessibility, working contact form with confirmation. The only hard launch blocker is the **DNS cutover**; the contact-form smoke test and analytics decision should happen at/around go-live. Everything else is post-launch polish.
+
+---
+
+## 2026-08-31 — SEO/AEO + forms audit follow-up (Claude, Fable 5)
+
+| # | Area | Change |
+|---|------|--------|
+| 1 | **Nav clip bug** | Desktop nav overflowed at 961–1360px (CTA clipped ~50px off-screen at 1280). Added ≤1360px rule (hide `.nav-phone`, tighter gaps) and ≤1120px rule (switch to menu button early, keep gold CTA). Verified no overflow at 375/970/1024/1130/1280/1365. |
+| 2 | **Footer overflow** | Pre-existing: 4-col footer forced horizontal scroll at 961–1046px (iPad landscape). Collapses to 2 cols in a 961–1120px band-scoped query. |
+| 3 | **Lead resilience** | n8n webhook flipped to `responseMode: lastNode` (200 only after the Resend email actually sends — was 200-then-silently-die under the execution cap). `main.js` catch now falls back to the native Web3Forms submit instead of a dead-end error message. Verified live: webhook responds with Resend message id in ~2s. |
+| 4 | **Repo/deploy bloat** | Removed 118MB of unreferenced working files (`images/markets-research/` 106MB — 1 of 47 photos used; `flyer-extracted/` 12MB — zero refs) → archived at `Documents/cowork/archive/crystalkilpatrick-image-research/`. Kept the one used photo as `images/markets/bear-creek-river-78737.webp`. images/ now 6.1MB. |
+| 5 | **Performance** | Re-encoded 9 `images/markets/*.jpg` (1080–1920px, 3.5MB) → webp resized to 1280px max, q80 (1.4MB, −60%). All refs rewired; verified 200s on preview + prod. |
+| 6 | **Sitemap** | Added `lastmod` to all 19 URLs (git last-commit date per page; touched pages = 2026-08-31). |
+| 7 | **Form polish** | Radio chips get a visible selected state (`:has(input:checked)` gold border/tint); radio group is now `fieldset`/`legend` (a11y); `inputmode="tel"` on phone; error styling moved from inline HTML to `.form-error` CSS. |
+
+Open (needs Adam): analytics is still the `console.info` stub — zero traffic/conversion data. Site had ZERO real leads and 3 spam submissions in the 30-day n8n window.

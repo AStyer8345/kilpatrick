@@ -94,8 +94,15 @@
           success.scrollIntoView({ behavior: 'smooth', block: 'center' });
         }
       }).catch(function () {
-        if (button) { button.disabled = false; button.textContent = 'Send Message'; }
-        if (msg) msg.textContent = 'Something went wrong sending your message. Please call 512-680-5835 or email crystal@crystalkilpatrick.com directly.';
+        /* n8n down (e.g. execution cap) — fall back to the form's native
+           Web3Forms action so the lead is never dropped. form.submit()
+           skips this listener, so no recursion. */
+        try {
+          form.submit();
+        } catch (err) {
+          if (button) { button.disabled = false; button.textContent = 'Send Message'; }
+          if (msg) msg.textContent = 'Something went wrong sending your message. Please call 512-680-5835 or email crystal@crystalkilpatrick.com directly.';
+        }
       });
     });
   }

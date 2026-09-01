@@ -321,6 +321,25 @@ strong { color: var(--fg-emphasis); font-weight: 600; }
 @media (max-width: 1499px) {
   .site-nav .nav-social { display: none; }
 }
+/* ≤1360px: full nav + phone + CTA don't fit; drop the phone number
+   (still in the footer and mobile menu) so the CTA never clips. */
+@media (max-width: 1360px) {
+  .site-nav .nav-phone { display: none; }
+  .site-nav .container { gap: 18px; }
+  .nav-links a { padding: 10px 12px; }
+}
+/* 961–1120px: the link row itself doesn't fit — switch to the menu
+   button early but keep the gold CTA visible. */
+@media (max-width: 1120px) {
+  .site-nav .nav-links { display: none; }
+  .site-nav .nav-toggle { display: inline-flex; }
+}
+/* 4-col footer needs ~1050px — collapse to 2 cols before it forces
+   horizontal scroll (pre-existing at 961–1046px, e.g. iPad landscape).
+   Band-scoped so the ≤960px single-column rule still wins on phones. */
+@media (min-width: 961px) and (max-width: 1120px) {
+  .site-footer .footer-grid { grid-template-columns: 1fr 1fr; gap: 40px 48px; }
+}
 .nav-social a {
   display: inline-flex;
   align-items: center;
@@ -1293,6 +1312,16 @@ body.nav-open { overflow: hidden; }
 .form-success h2 { margin: 0 0 12px; }
 .form-success p { margin: 0; color: var(--text-secondary); }
 .form-row { margin-bottom: 24px; }
+fieldset.form-row { border: 0; padding: 0; margin: 0 0 24px; min-width: 0; }
+.form-row legend {
+  display: block;
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  margin-bottom: 8px;
+  padding: 0;
+}
 .form-row label {
   display: block;
   font-size: 11px;
@@ -1343,6 +1372,17 @@ body.nav-open { overflow: hidden; }
   margin: 0;
 }
 .form-radios input[type="radio"] { margin: 0; accent-color: var(--gold); }
+.form-radios label:has(input:checked) {
+  border-color: var(--gold);
+  background: rgba(181, 151, 90, 0.08);
+  color: var(--text);
+}
+.form-error {
+  color: #9A2A2A;
+  margin: 0 0 12px;
+  min-height: 1em;
+  font-size: 14px;
+}
 .form-consent {
   display: grid;
   grid-template-columns: 22px 1fr;
@@ -1626,18 +1666,18 @@ body.nav-open { overflow: hidden; }
   background: linear-gradient(180deg, rgba(0,0,0,0) 60%, rgba(0,0,0,0.25) 100%);
   pointer-events: none;
 }
-.guide-card-photo--belterra { background-image: url("/images/markets-research/belterra-bear-creek-78737/01-bear-creek-river-austin-texas.webp"); }
-.guide-card-photo--south-austin { background-image: url("/images/markets/south-austin-78745.jpg"); }
-.guide-card-photo--barton-creek { background-image: url("/images/markets/barton-creek-78735.jpg"); }
-.guide-card-photo--new-braunfels { background-image: url("/images/markets/new-braunfels.jpg"); }
-.guide-card-photo--buda { background-image: url("/images/markets/buda-78610.jpg"); }
-.guide-card-photo--cedar-park { background-image: url("/images/markets/cedar-park-78613.jpg"); }
-.guide-card-photo--dripping-springs { background-image: url("/images/markets/dripping-springs-78620.jpg"); }
-.guide-card-photo--kyle { background-image: url("/images/markets/kyle-78640.jpg"); }
-.guide-card-photo--maple-run { background-image: url("/images/markets/southwest-austin-maple-run-78749.jpg"); background-position: center 35%; }
-.guide-card-photo--circle-c { background-image: url("/images/markets/southwest-austin-maple-run-78749.jpg"); background-position: center 35%; }
+.guide-card-photo--belterra { background-image: url("/images/markets/bear-creek-river-78737.webp"); }
+.guide-card-photo--south-austin { background-image: url("/images/markets/south-austin-78745.webp"); }
+.guide-card-photo--barton-creek { background-image: url("/images/markets/barton-creek-78735.webp"); }
+.guide-card-photo--new-braunfels { background-image: url("/images/markets/new-braunfels.webp"); }
+.guide-card-photo--buda { background-image: url("/images/markets/buda-78610.webp"); }
+.guide-card-photo--cedar-park { background-image: url("/images/markets/cedar-park-78613.webp"); }
+.guide-card-photo--dripping-springs { background-image: url("/images/markets/dripping-springs-78620.webp"); }
+.guide-card-photo--kyle { background-image: url("/images/markets/kyle-78640.webp"); }
+.guide-card-photo--maple-run { background-image: url("/images/markets/southwest-austin-maple-run-78749.webp"); background-position: center 35%; }
+.guide-card-photo--circle-c { background-image: url("/images/markets/southwest-austin-maple-run-78749.webp"); background-position: center 35%; }
 .guide-card-photo--westlake { background-image: url("/images/aerial-luxury-home.webp"); }
-.guide-card-photo--shady-hollow { background-image: url("/images/markets/southwest-austin-maple-run-78749.jpg"); background-position: center 35%; }
+.guide-card-photo--shady-hollow { background-image: url("/images/markets/southwest-austin-maple-run-78749.webp"); background-position: center 35%; }
 .guide-card:hover .guide-card-photo { transform: scale(1.04); transition: transform 1s cubic-bezier(0.165, 0.84, 0.44, 1); }
 .guide-card-body { padding: 28px 32px 32px; }
 .guide-card-zip {
