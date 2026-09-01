@@ -47,12 +47,15 @@
     });
   }
 
-  /* --- CTA tracking (console.info for now; analytics layer plugs in here) --- */
+  /* --- CTA tracking (GA4 via analytics.js when configured) --- */
   document.addEventListener('click', function (e) {
     var el = e.target.closest('.js-track-cta');
     if (!el) return;
     var event = el.getAttribute('data-event') || 'cta_click';
     var href = el.getAttribute('href') || '';
+    if (window.gtag) {
+      window.gtag('event', event, { link_url: href, page_path: window.location.pathname });
+    }
     if (typeof console !== 'undefined' && console.info) {
       console.info('[ckg-cta]', event, { href: href, page: window.location.pathname });
     }
@@ -85,6 +88,7 @@
         body: JSON.stringify(data)
       }).then(function (res) {
         if (!res.ok) throw new Error('HTTP ' + res.status);
+        if (window.gtag) window.gtag('event', 'generate_lead', { method: 'contact_form' });
         var success = document.getElementById('contactSuccess');
         if (success) {
           form.hidden = true;
