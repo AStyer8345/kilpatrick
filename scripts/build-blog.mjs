@@ -6,7 +6,7 @@ const blogUrl = origin + "/blog/";
 const author = "Crystal Kilpatrick";
 const publisher = "Crystal Kilpatrick Group";
 const image = origin + "/images/og-image.jpg";
-const indexTitle = "Austin Real Estate Blog | Crystal Kilpatrick";
+const indexTitle = "Get the Latest Scoop | Austin Real Estate | Crystal Kilpatrick";
 const indexDescription = "Crystal Kilpatrick shares Austin housing market updates and practical advice for buying and selling in Southwest Austin, Dripping Springs, and the Hill Country.";
 
 const file = (path) => new URL(path, root);
@@ -120,7 +120,7 @@ await write("blog/index.html", page({
   description: indexDescription,
   url: blogUrl,
   graph: [{ "@type": "Blog", name: indexTitle, description: indexDescription, url: blogUrl }, breadcrumbs()],
-  body: `      <h1>Austin Real Estate Blog</h1>
+  body: `      <h1>Get the Latest Scoop</h1>
       <p class="lead">Market updates and advice from Crystal Kilpatrick for buying or selling in Austin, Dripping Springs, and the Hill Country.</p>
 ${posts.map((post) => `      <article class="blog-card">
         <p class="blog-meta"><time datetime="${post.date}">${shortDate(post.date)}</time></p>
@@ -157,10 +157,12 @@ ${post.sections.map(({ heading, paragraphs }) => `        <section class="blog-p
           <h2>${escape(heading)}</h2>
 ${paragraphs.map((paragraph) => `          <p>${escape(paragraph)}</p>`).join("\n")}
         </section>`).join("\n")}
-        <section class="blog-post-section">
+        <section class="blog-post-section blog-faq">
           <h2>Frequently asked questions</h2>
-${post.faqs.map(({ question, answer }) => `          <h3>${escape(question)}</h3>
-          <p>${escape(answer)}</p>`).join("\n")}
+${post.faqs.map(({ question, answer }) => `          <details name="blog-faq">
+            <summary>${escape(question)}</summary>
+            <p>${escape(answer)}</p>
+          </details>`).join("\n")}
         </section>
         <section class="blog-cta">
           <h2>Talk through your next move</h2>

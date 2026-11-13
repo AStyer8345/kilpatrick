@@ -75,3 +75,21 @@
 .blog-link-list {
   padding-left: 1.25rem;
 }
+
+.blog-faq details {
+  border-bottom: 1px solid var(--border);
+}
+
+.blog-faq details:first-of-type {
+  border-top: 1px solid var(--border);
+}
+
+.blog-faq summary {
+  padding: 0.9rem 0;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.blog-faq details p {
+  margin: 0 0 1rem;
+}
