@@ -1,0 +1,95 @@
+.blog-main {
+  padding: calc(var(--nav-height) + clamp(2rem, 6vw, 5rem)) 0 clamp(3rem, 8vw, 6rem);
+}
+
+.blog-content {
+  max-width: 760px;
+  margin-inline: auto;
+}
+
+.blog-main h1 {
+  font-size: clamp(2.25rem, 5.5vw, 4rem);
+  line-height: 1.12;
+  margin-bottom: 1.25rem;
+}
+
+.blog-main h2 {
+  font-size: clamp(1.55rem, 3.2vw, 2.1rem);
+  line-height: 1.25;
+  margin-bottom: 0.7rem;
+}
+
+.blog-main h3 {
+  font-size: 1.15rem;
+  line-height: 1.45;
+  margin-bottom: 0.35rem;
+}
+
+.blog-main a:not(.button) {
+  color: var(--text);
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+
+.blog-main a:not(.button):hover {
+  text-decoration-thickness: 2px;
+}
+
+.blog-breadcrumb,
+.blog-meta {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+.blog-breadcrumb {
+  margin-bottom: 1.5rem;
+}
+
+.blog-meta {
+  margin-bottom: 1.5rem;
+}
+
+.blog-summary {
+  border-left: 3px solid var(--gold);
+  padding-left: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.blog-post-section {
+  margin-top: 2rem;
+}
+
+.blog-card,
+.blog-cta {
+  border: 1px solid var(--border);
+  background: var(--bg-white);
+  padding: clamp(1.25rem, 4vw, 2.25rem);
+  margin-top: 2rem;
+}
+
+.blog-card .blog-meta,
+.blog-card p:last-child {
+  margin-bottom: 0;
+}
+
+.blog-link-list {
+  padding-left: 1.25rem;
+}
+
+.blog-faq details {
+  border-bottom: 1px solid var(--border);
+}
+
+.blog-faq details:first-of-type {
+  border-top: 1px solid var(--border);
+}
+
+.blog-faq summary {
+  padding: 0.9rem 0;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.blog-faq details p {
+  margin: 0 0 1rem;
+}
